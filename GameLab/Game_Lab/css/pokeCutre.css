@@ -1,0 +1,402 @@
+/*===========IMG PLAYER==========*/
+.imgPlayer {
+
+    width: 400px;
+    height: 400px;
+    transform: scaleX(-1);
+
+}
+
+/*===========IMG BOT=========*/
+
+.imgMaquina {
+    width: 400px;
+    height: 400px;
+
+    /* mantiene proporciones */
+}
+
+/*========IMG ATAQUES================*/
+
+.imgAtaques {
+
+    max-width: 100%;
+    width: 80px;
+}
+
+/*========IMG ESCUDOS================*/
+
+.imgEscudos {
+
+    max-width: 100%;
+    width: 80px;
+}
+
+
+/*================BARRA VIDA JUGADOR===========*/
+.barraVidaJugador {
+    width: 200px;
+    /* ancho total */
+    height: 20px;
+    /* alto total */
+    border: 2px solid #000;
+    /* marco negro */
+    background-color: #ccc;
+    /* fondo gris (vacío) */
+    position: relative;
+}
+
+.barraRellenoJugador {
+    height: 100%;
+    width: 100%;
+    /* vida completa al inicio */
+    background-color: green;
+    transition: width 0.5s ease;
+    /* animación suave */
+}
+
+
+/*================BARRA VIDA MAQUINA=========*/
+.barraVidaMaquina {
+    /* ancho total */
+    width: 200px;
+    /* alto total */
+    height: 20px;
+    /* marco negro */
+    border: 2px solid #000;
+    /* fondo gris (vacío) */
+    background-color: #ccc;
+    position: relative;
+}
+
+.barraRellenoMaquina {
+    height: 100%;
+    width: 100%;
+    /* vida completa al inicio */
+    background-color: green;
+    /* animación suave */
+    transition: width 0.5s ease;
+}
+
+/*==================================*/
+.fsTextMaquina {
+
+    font-size: 15px;
+    padding: 10px;
+}
+
+.fsTextJugador {
+
+    font-size: 15px;
+    padding: 10px;
+}
+
+.fsPots {
+
+    font-size: 12px;
+}
+
+.gifMaquina {
+    background-image: url(https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExanB1dzdoYjV6NHNybTYwamRxM3NuczFoNXRiOTBiZDhrbmh1Y2E3eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lKaeQAunM3hZaqsOpj/giphy.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gifJugador {
+
+    background-image: url(https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGVreXo4aXA3bzl6Nm80eXo5NHpzaGEzaDk2MG51dDJxOXk4Y3p6YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dl7r5SBP6aZsdvvVvg/giphy.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.btnAtacar button {
+    border-radius: 50%;
+    border: 1px solid;
+    height: 100px;
+    width: 100px;
+    background: linear-gradient(to left, rgb(196, 0, 163), rgb(1, 225, 232));
+}
+
+
+.btnDefensa button {
+    border-radius: 50%;
+    border: 1px solid;
+    height: 100px;
+    width: 100px;
+    font-size: 14px;
+    background: linear-gradient(to left, rgb(144, 144, 144), rgb(208, 209, 209));
+
+}
+
+
+.btnPociones {
+
+    background: linear-gradient(to right, rgb(0, 61, 11), orange);
+    border-radius: 100%;
+    border: none;
+    width:70px;
+    height: 70px;
+    font-size: 20px;
+}
+
+.btnPociones:hover {
+
+    transform: scale(0.9);
+    transition: transform 0.2s ease;
+}
+
+
+
+.fondoAtaques {
+
+    background: linear-gradient(to right, black, red);
+}
+
+.fondoJuego {
+
+    background-color: black;
+}
+
+
+.imgPociones {
+    width: 80px;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+    /* duración y suavizado */
+}
+
+.imgPociones.selected {
+    transform: scale(0.8);
+}
+
+
+
+.imgPociones:hover {
+
+    transform: scale(0.8);
+    transition: 1s;
+}
+
+.imgWin,
+.imgLose {
+
+    width: 400px;
+}
+
+/* =====================
+   MEDIA QUERIES RESPONSIVE
+   ===================== */
+
+/* Móviles XS (≤575px) */
+@media (max-width: 575px) {
+    body::before {
+        content: "≤575px XS";
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgb(185, 6, 6);
+        color: rgb(0, 0, 0);
+        padding: 5px;
+        z-index: 9999;
+    }
+
+    .imgPlayer {
+
+        width: 200px;
+        height: 200px;
+        transform: scaleX(-1);
+
+    }
+
+    .imgMaquina {
+        width: 200px;
+        height: 200px;
+
+    }
+
+    .btnAtacar button {
+        border-radius: 50%;
+        border: 1px solid;
+        height: 100px;
+        width: 100px;
+    }
+
+    .imgAtaques {
+
+        max-width: 100%;
+        width: 50%;
+    }
+
+    .imgEscudos {
+
+        max-width: 100%;
+        width: 50%;
+    }
+
+    .agua,
+    .fuego,
+    .planta {
+        font-size: 13px;
+        padding-bottom: 20px !important;
+        display: inline-block;
+    }
+
+    input {
+
+        margin-bottom: 10px !important;
+    }
+
+
+
+    .btnAtacar button {
+        border: 1px solid;
+        height: 80px;
+        width: 80px;
+        font-size: 15px;
+    }
+
+    .btnPociones {
+
+        padding: 2px;
+        border-radius: 10px;
+        border: none;
+
+    }
+
+
+    .btnDefensa button {
+        border: 1px solid;
+        height: 80px;
+        width: 80px;
+        font-size: 10px;
+
+    }
+
+    .fsTextJugador,
+    .fsTextMaquina {
+
+        font-size: 10px;
+    }
+
+    .imgPociones {
+        width: 50px;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+        /* duración y suavizado */
+    }
+
+    .fsPots {
+
+        font-size: 10px;
+    }
+
+    .barraVidaJugador,
+    .barraVidaMaquina {
+        width: 140px;
+        /* más corta */
+        height: 16px;
+        /* más bajita */
+
+    }
+
+}
+
+
+/* Móviles verticales SM (576px – 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    body::before {
+        content: "576px-767px SM";
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgb(0, 255, 30);
+        color: rgb(0, 0, 0);
+        padding: 5px;
+        z-index: 9999;
+
+    }
+}
+
+/* Tablets verticales MD (768px – 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    body::before {
+        content: "768px-991px MD";
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgb(1, 22, 255);
+        color: rgb(0, 0, 0);
+        padding: 5px;
+        z-index: 9999;
+
+    }
+}
+
+/* iPad Pro Vertical (Portrait) */
+@media (min-width: 834px) and (max-width: 1024px) {}
+
+/* Tablets horizontales / laptops pequeñas LG (992px – 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    body::before {
+        content: "992px-1199px LG";
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgb(196, 1, 255);
+        color: rgb(0, 0, 0);
+        padding: 5px;
+        z-index: 9999;
+
+    }
+}
+
+
+/*NEST HUB NORMAL YS I (1200px – 1279px) */
+@media (min-width: 1200px) and (max-width: 1279px) {
+    body::before {
+        content: "1200px-1279px";
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+        padding: 5px;
+        z-index: 9999;
+
+    }
+}
+
+/* iPad Pro Horizontal (Landscape) */
+@media (min-width: 1025px) and (max-width: 1366px) {}
+
+/* NEST HUB MAX Y SIMILARES (1280px – 1399px) */
+@media (min-width: 1280px) and (max-width: 1399px) {
+
+    body::before {
+        content: "1200px-1279px";
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgb(255, 102, 0);
+        color: rgb(255, 255, 255);
+        padding: 5px;
+        z-index: 9999;
+    }
+}
+
+/* Pantallas grandes XXL ≥1400px */
+@media (min-width: 1400px) {
+    body::before {
+        content: "1200px-1279px";
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgb(135, 181, 255);
+        color: rgb(255, 255, 255);
+        padding: 5px;
+        z-index: 9999;
+    }
+}

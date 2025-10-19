@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Yisus">
+    <meta name="description"
+        content="GAME-LAB Web personal donde muestro mi progreso aprendiendo JavaScript aplicado en minijuegos. Cada juego representa una etapa de mi aprendizaje: desde prácticas simples hasta pequeños proyectos con lógica, turnos y efectos visuales.">
+    <meta name="keywords" content="html, css, javascript, game-lab, Yisus , jueguitos,">
+    <link rel="icon" href="ruta/a/tu/icono.png" type="image/png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/pokeCutre.css">
+    <link rel="stylesheet" href="../css/headerFooter.css">
+    <title>GAME-LAB</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="contHeader ">
+            <h1 class="text-center text-white p-4">Minijuegos - YisusGames - PokéCutre (terminó siendo Mago vs Slime )
+            </h1>
+
+            <div class="text-center">
+                <button id="btnBackLogin">Login</button>
+            </div>
+
+        </div>
+    </header>
+    <!--! texto descriptivo-->
+    <div class="container shadow mb-5">
+        <div class="fs-3 p-3">
+            <h3 class="text-center py-3 fs-2">PokéCutre (Mago vs Slime) 🧙‍♂️👾</h3>
+            <p>Este proyecto comenzó como un intento de crear un pequeño juego estilo Pokémon, pero terminó
+                evolucionando en algo propio: un combate por turnos entre un mago y un slime.
+                Fue mi primer gran práctica para trabajar ataques, turnos, vida, críticos, escudos elementales y logs
+                dinámicos.</p>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-4 p-3 d-flex flex-column text-center border">
+                <h5 class="mb-4 ">Características principales ✅</h5>
+                <p>• Sistema de turnos entre jugador y enemigo.</p>
+                <p>• Ataques elementales: <strong>Fuego</strong>, <strong>Agua</strong> y <strong>Planta</strong>, cada
+                    uno con ventajas y desventajas.</p>
+                <p>• Escudos protectores del mismo tipo que los ataques.</p>
+                <p>• Daños <strong>críticos</strong>, <strong>súper efectivos</strong> o <strong>no efectivos</strong>,
+                    con badges visibles en pantalla.</p>
+                <p>• Registro visual del combate con mensajes de acciones (logs).</p>
+                <p>• Sistema de vidas que se actualiza dinámicamente tras cada ataque.</p>
+            </div>
+
+            <!--todo: Cómo se juega:-->
+            <div class="col-12 col-lg-4 p-3 d-flex flex-column text-center border ">
+                <h5 class="mb-4">Cómo se juega ⚔️ 🛡️</h5>
+                <p>1. En cada turno, el <strong>mago</strong> y el <strong>slime</strong> realizan sus ataques y
+                    defensas
+                    elementales.</p>
+                <p>2. Se comparan los tipos de elementos: <strong>Fuego</strong>, <strong>Agua</strong> o
+                    <strong>Planta</strong>.
+                </p>
+                <p>3. Si los elementos son iguales, ambos causan <strong>daño normal</strong> (empate elemental).</p>
+                <p>4. Si el ataque de un personaje tiene ventaja elemental sobre el otro, causará <strong>daño súper
+                        efectivo</strong>.</p>
+                <p>5. Si el ataque es de un elemento en desventaja, causará <strong>daño no efectivo</strong>
+                    (reducido).</p>
+                <p>6. Ambos personajes pierden vida en cada turno según el resultado de la comparación.</p>
+                <p>7. El combate termina cuando uno de los dos llega a <strong>0 de vida</strong>.</p>
+
+
+
+
+            </div>
+
+
+            <!--todo: Próximos pasos-->
+            <div class="col-12 col-lg-4 p-3 text-start border ">
+                <h5 class="mb-4 text-center">Próximos pasos 🚧</h5>
+                <ul>
+                    <li class="mb-3">Añadir animaciones de ataque y defensa.</li>
+                    <li class="mb-3">Incluir sonido y efectos visuales según el tipo de ataque.</li>
+                    <li class="mb-3">Implementar un sistema de niveles o experiencia.</li>
+                    <li class="mb-3">Crear una pantalla final de victoria o derrota.</li>
+                    <li class="mb-3">Ajustar la lógica de IA del slime para hacerlo más estratégico.</li>
+                    <li class="mb-3">Responsividad total</li>
+                    <li class="">Y más...</li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-12 p-3 text-center ">
+            <h4>🔁 Lógica de debilidades elementales</h4>
+            <p>El sistema de combate se basa en una lógica de <strong>ventajas y desventajas elementales</strong>,
+                donde cada tipo de ataque puede ser más o menos efectivo según el elemento del rival.</p>
+            <p>🔥 <strong>Fuego</strong> quema a <strong>Planta</strong> → <em>daño súper efectivo</em>.</p>
+            <p>💧 <strong>Agua</strong> apaga a <strong>Fuego</strong> → <em>daño súper efectivo</em>.</p>
+            <p>🌿 <strong>Planta</strong> absorbe a <strong>Agua</strong> → <em>daño súper efectivo</em>.</p>
+            <p>Si ambos ataques son del mismo tipo, se considera un <strong>empate elemental</strong> y el daño
+                infligido es <em>normal</em>.</p>
+            <p>Cuando un ataque es de un elemento en desventaja (por ejemplo, <strong>Agua</strong> contra
+                <strong>Planta</strong>), se considera <em>no efectivo</em> y causa menos daño.
+            </p>
+            <p>💥 Además, durante cada ataque se calcula un posible <strong>daño crítico</strong> mediante un número
+                aleatorio entre <strong>5 y 15</strong>, que se suma al daño total final (sí, aún falta pulirlo 😅).
+            </p>
+
+        </div>
+    </div>
+
+
+
+    <!--! historia acto 1 visible solo hasta darle al botón de combate 1 -->
+    <div class="container border primerHistoria ">
+
+        <div class="text-center">
+            <h2 class="border bg-secondary p-3">⚔️ PokéCutre: El Reino Bugueado</h2>
+            <h4 class="my-5">Capítulo I – El Eco del Console.log Infinito</h4>
+            <p class="text-start">En las profundidades del código, donde las funciones olvidadas duermen y las variables
+                sin declarar vagan
+                eternamente,
+                un eco maldito resonó entre las líneas:
+                “console.log… console.log… console.log…”
+                De ese bucle infernal nació Slim, criatura viscosa hecha de errores y desesperación, capaz de colapsar
+                todo el proyecto.
+                Pero aún queda esperanza.
+                Yisus, el último mago del Reino Bugueado, se alza con su varita-teclado y sus pociones de stack overflow
+                para restaurar el orden.
+                El destino del código depende de ti, hechicero del DOM.
+                Prepara tus buffs... y entra en combate.</p>
+        </div>
+
+        <div class="text-center my-4">
+            <a class="nav-link p-2 bord btn-sm bg-danger rounded" href="https://jesus323dev.github.io/Mago-Vs-World/" target="_blank">
+            Luchar
+            </a>
+        </div>
+
+
+
+    </div>
+    <!--! historia acto 2 visible solo hasta darle al botón de combate 2-->
+    <div class="container text-center d-none acto2 border">
+        <div>
+            <h2 class="border bg-secondary p-3">⚡ PokéCutre: El Reino Bugueado</h2>
+            <h4 class="my-5">Capítulo II – El TypeError Prohibido</h4>
+
+            <p>Tras la caída de Slim, el mago Yisus creyó haber restaurado la estabilidad del código.
+                Pero el IDE aún susurra…
+
+                “undefined… undefined… undefined…”
+
+                De los rincones del stack surgió Nullius, el TypeError Prohibido, maestro del caos sintáctico y
+                destructor de variables.
+                Su toque puede convertir cualquier línea en un null eterno.
+
+                Yisus, armado con nuevas pociones y la fe en su git commit, se adentra en el Campo de Compilación, donde
+                la realidad se recompila a cada paso.
+
+                El combate no ha terminado... solo se ha refactorizado.
+            </p>
+
+
+            <div>
+                <button class="d-none acto2" id="btnActo2">Continuar Acto 2</button>
+            </div>
+
+            <div>
+                <img class="imgWin" src="../media/img/pokeCutre/victoria.png" alt="">
+                <img class="imgLose d-none" src="../media/img/pokeCutre/perdiste.png" alt="">
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <!--! BLOQUE DE MAGO Y SLIME Y ATAQUES-->
+    <div class="row d-flex  fondoJuego text-white d-none primerCombate">
+
+        <!--!SECCIÓN JUGADOR-->
+        <div id="vidaJugador" class="flex-column col-6 col-lg-4 mx-auto">
+            <section id="jugadorVida" class="gifJugador">
+                <!-- todo: IMG - VIDA JUGADOR1-->
+                <div class="text-center">
+                    <p class="jugadorVida text-white">Vida:</p>
+                    <div class="barraVidaJugador mx-auto">
+                        <div class="barraRellenoJugador"></div>
+                    </div>
+                </div>
+                <!-- todo: IMG - JUGADOR1-->
+                <div class="text-center">
+                    <img class=" imgPlayer " src="../media/img/pokeCutre/magoPlayer.png" alt="">
+                </div>
+                <!--! log jugadas-->
+                <div>
+                    <div id="logJugador" class=" fsTextJugador alert alert-primary" role="alert"></div>
+                </div>
+                <!--! Contenedor de mensajes del jugador -->
+                <div>
+                    <p class="efectivo badge bg-success d-none">DañoNormal</p>
+                    <p class="superEfec badge bg-danger d-none">SuperEfec</p>
+                    <p class="noEsEfec badge bg-info d-none">NoEsEfec</p>
+                </div>
+            </section>
+
+
+
+
+            <!--! pociones-->
+            <div class="row ">
+                <div class="col-12 d-flex flex-row align-content-center justify-content-center">
+
+                    <!--todo: poción critico-->
+                    <div class="d-flex flex-column">
+                        <img class="imgPociones mx-auto" data-potion="critico"
+                            src="../media/img/pokeCutre/pocionCritico.png" alt="">
+                        <p class="fsPots text-center">Aumenta el critico en 8</p>
+                    </div>
+
+                    <!--todo: poción vida-->
+                    <div class="d-flex flex-column mx-1 mx-lg-4">
+                        <img class="imgPociones mx-auto" data-potion="vida" src="../media/img/pokeCutre/pocionVida.png"
+                            alt="">
+                        <p class="fsPots ">Aumenta la vida en 50</p>
+                    </div>
+
+
+                    <!--todo: botón pociones-->
+                    <div class=" mx-0 mx-lg4 my-auto">
+                        <button type="button" id="btnPots" class="btnPociones">Usar</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <!--! RADIOS DE ATAQUE-->
+
+        <div class="order-4 order-lg-3 col-12 col-lg-2 mx-lg-auto d-flex flex-col flex-lg-column
+                    text-center border fondoAtaques ">
+
+
+            <!--todo: Ataque fuego-->
+            <div class="my-0 my-lg-3 d-flex flex-column">
+                <!--! IMG ESCUDO DE FUEGO-->
+                <img src="../media/img/pokeCutre/escudoFuego.png" class="imgEscudos d-none mx-auto escudoFuego" alt="">
+
+                <!--! IMG ATAQUE DE FUEGO-->
+                <img class="imgAtaques  mx-auto" src="../media/img/pokeCutre/ataqueFuego.png" alt="">
+
+                <!--! RADIO FUEGO-->
+                <label class="fuego"> Ataque de Fuego </label>
+                <input type="radio" name="ataqueName" value="fuego" id="attackFuego">
+            </div>
+
+
+            <!--todo: Ataque Agua-->
+            <div class="my-0 my-lg-3 d-flex flex-column">
+
+                <!--! IMG ESCUDO DE AGUA-->
+                <img src="../media/img/pokeCutre/escudoAgua.png" class="imgEscudos d-none mx-auto " alt="">
+
+                <!--! IMG ATAQUE DE AGUA-->
+                <img class="imgAtaques mx-auto" src="../media/img/pokeCutre/ataqueAgua.png" alt="">
+
+                <label class="agua">Ataque de Agua</label>
+                <input type="radio" name="ataqueName" value="agua" id="attackAgua">
+            </div>
+
+            <!--todo: Ataque Planta-->
+            <div class="my-0 my-lg-3 d-flex flex-column">
+
+                <!--! IMG ESCUDO DE PLANTA-->
+                <img src="../media/img/pokeCutre/escudoPlanta.png" class="imgEscudos d-none mx-auto " alt=""
+                    id="escudoPlanta">
+
+                <!--! IMG ATAQUE DE PLANTA-->
+                <img class="imgAtaques mx-auto" src="../media/img/pokeCutre/ataquePlanta.png" alt="">
+
+                <label class="my-0 my-lg-2 planta">Ataque de Planta</label>
+                <input type="radio" name="ataqueName" value="planta" id="attackPlanta">
+            </div>
+
+            <!--! BOTÓN DE ATAQUE-->
+            <div class="justify-content-center align-content-center p-2">
+                <div class="text-center btnAtacar my-0 my-lg-3 align-content-center justify-content-center">
+                    <button id="btnAttack" class="d-none mostrarOcultar">ATACAR <br>⚔️</button> <br>
+                </div>
+
+                <div class="btnDefensa my-0 my-lg-3 align-content-center justify-content-center">
+                    <button id="btnNextTurno" class=" d-none">DEFENDERSE <br> 🛡️ </button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--! VIDA MAQUINA-->
+        <div class="order-2 order-lg-3 col-6 col-lg-4 mx-auto">
+            <section id="vidaMaquina" class="gifMaquina">
+
+                <!-- todo: IMG - VIDA MAQUINA-->
+                <div class=" text-center">
+                    <p class="maquinaVida text-white">vida:</p>
+                    <div class="barraVidaMaquina mx-auto">
+                        <div class="barraRellenoMaquina "></div>
+                    </div>
+                </div>
+
+                <!-- todo: IMG - MAQUINA-->
+                <div class="text-center">
+                    <img class=" imgMaquina p-3" src="../media/img/pokeCutre/gotaPlayer.png" alt="">
+                </div>
+
+                <!--todo: log maquina-->
+                <div>
+                    <div id="logMaquina" class="border text-center fsTextMaquina alert alert-danger" role="alert"></div>
+                </div>
+
+                <!--? Contenedor de mensajes de la máquina -->
+                <div>
+                    <p class="efectivo badge bg-success d-none">DañoNormal</p>
+                    <p class="superEfec badge bg-danger d-none">SuperEfec</p>
+                    <p class="noEsEfec badge bg-info d-none">NoEsEfec</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+    <div class="text-center my-5 ">
+        <button id="btnBack" class="btn btn-primary btn-lg mx-0 mx-lg-5 ">Anterior</button>
+        <button id="btnNext" class="btn btn-primary btn-lg mx-0 mx-lg-5 ">Siguiente</button>
+    </div>
+
+    <footer class="bg-body-secondary  border p-2 loginFooter">
+        <div class="container text-center">
+            <p class="py-3 text-white">© 2025 GameLab — Proyecto personal de Yisus.
+                Desarrollado con HTML, CSS y JavaScript.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script src="../js/pokeCutre.js"></script>
+</body>
+
+</html>

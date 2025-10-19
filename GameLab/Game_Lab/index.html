@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Yisus">
+    <meta name="description"
+        content="GAME-LAB Web personal donde muestro mi progreso aprendiendo JavaScript aplicado en minijuegos. Cada juego representa una etapa de mi aprendizaje: desde prácticas simples hasta pequeños proyectos con lógica, turnos y efectos visuales.">
+    <meta name="keywords" content="html, css, javascript, game-lab, Yisus , jueguitos,">
+
+    <!--!bootstrap-css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="headerFooter.css">
+    <link rel="stylesheet" href="login.css">
+
+    <title>Login</title>
+</head>
+
+<body>
+
+
+    <header>
+        <div class="contHeader">
+            <h1 class="text-center text-white p-4">Bienvenido a GameLab</h1>
+        </div>
+
+    </header>
+
+    <section class="bgSection">
+
+
+        <div class="container">
+            <div class="text-center  mx-auto w-50 textPrincipal cont-w-100">
+                <p class="p-3 ">
+                    Bienvenido a GameLab. Inicia sesión (es solo parte del experimento 🧪) para ver mi progreso
+                    aprendiendo JavaScript
+                    aplicado a
+                    juegos
+                    cutres, pero funcionales 😎.
+                    Cada minijuegos representa una etapa de aprendizaje distinta.
+                </p>
+            </div>
+        </div>
+
+
+
+
+        <!--!BTN ABRIR MODAL-->
+        <div class="text-center ">
+            <button type="button" class="btnReadme cont-w-100" data-bs-toggle="modal" data-bs-target="#readme">
+                Readme
+            </button>
+        </div>
+
+
+        <!--!LOGIN-->
+        <div class="divForm container mt-5 border rounded-5 w-50 bgLogin cont-w-100 ">
+            <form id="formLogin" action="">
+                <h3 class="text-center fs-1 my-3">LOGIN</h3>
+
+                <div class=" d-flex flex-column align-items-center justify-content-center contLogin">
+                    <label class=" " for="inputUsuario"></label>
+
+                    <input type="text" name="usuario" id="inputUsuario" class="mb-4 cont-w-100"
+                        placeholder="Usuario: admin">
+
+                    <label class="" for="inputPassword"></label>
+
+                    <input type="password" name="password" id="inputPassword" class="cont-w-100"
+                        placeholder="Contraseña: 1234 ">
+
+
+
+                </div>
+
+                <div class="reset text-center mb-5">
+                    <p class="checkLogin text-white"></p>
+                    <p class="loginIntentos text-white"></p>
+                    <!--!Botón login-->
+                    <button class="btnLogin">Login</button>
+                    <div class="text-white my-2">
+                        <label>
+                            <input type="checkbox" id="recordarContra">
+                            Recordar Contraseña
+                        </label>
+                    </div>
+                </div>
+
+
+            </form>
+        </div>
+    </section>
+
+
+    <!--!Modal-->
+    <div class="modal fade text-dark" id="readme" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>🔬 Bienvenido a GameLab</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <p>
+                        Esta es mi web donde voy mostrando mi progreso aprendiendo JavaScript, pero a mi manera: con
+                        jueguitos cutres, errores, risas y muchas pruebas. </p>
+
+                    <p> Cada minijuego que ves aquí representa una parte de lo que he ido aprendiendo paso a paso:
+                        condicionales, eventos, turnos, lógica, efectos... todo lo que se me cruza.</p>
+
+                    <p> No es una web profesional (todavía 😏), pero sí es 100% mía.
+                        He roto cosas, las he arreglado, y al final todo ha servido para seguir mejorando.</p>
+
+                    <p>Así que si estás aquí: bienvenido al caos organizado.
+                        Disfruta del laboratorio de pruebas de Yisus 🧠🎮</p>
+
+                    <i>© 2025 GameLab — Última actualización: 4 de octubre de 2025</i>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="bg-body-secondary  border p-2 loginFooter">
+        <div class="container text-center">
+            <p class="py-3 text-white">© 2025 GameLab — Proyecto personal de Yisus.
+                Desarrollado con HTML, CSS y JavaScript.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="js/login.js"></script>
+</body>
+
+</html>

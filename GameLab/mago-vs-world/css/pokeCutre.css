@@ -1,0 +1,517 @@
+/* =====================
+   Reset Básico
+   ===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+
+.customHeight {
+    max-height: 50px;
+    overflow: auto;
+}
+
+.heightBtn {
+
+    max-height: 200px;
+    border: 1px solid black;
+}
+
+
+.fsTextMaquina {
+
+    font-size: 15px;
+    padding: 10px;
+}
+
+/**/
+.fsTextJugador {
+
+    font-size: 15px;
+    padding: 10px;
+}
+
+/*font size de texto pociones*/
+.fsPots {
+
+    font-size: 12px;
+}
+
+/*estilos bordes de sección de pociones*/
+.styleBorde {
+
+    border-bottom: 3px solid rgb(240, 80, 80);
+    border-top: 3px solid green;
+
+
+
+}
+
+/*==========================================================IMÁGENES Y HOVER DEL JUEGO==========================================================*/
+
+.bgAtaqueFuego:hover {
+    background-image: url(https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdzJ2ZDNwb25xaHUyN2U1OTVoMnFoenNoaHczbzFvcGo1YjNxd2drYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lTkOQ1aacqClLCcBZq/giphy.gif);
+    background-position: center;
+}
+
+.bgAtaqueAgua:hover {
+
+    background-image: url(https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWR0d240ZnhkanFzczN4aWVqOTkzamgxZnkydmxkYW5oNXhla2NkbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Q7rFLFqclXSpeJzHtV/giphy.gif);
+
+    background-position: center;
+}
+
+.bgAtaquePlanta:hover {
+
+    background-image: url(https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTNjYm4zMTF6MWhoZTJnMXo3b2tiOWg4cnkzd3FuNW5zYW91YWpqNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Utxal9nFDIZQFKOTVo/giphy.gif);
+    background-position: start;
+    background-position: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+
+}
+
+
+
+/*FONDO-GIF MAGO Y SLIME*/
+.gifMaquina {
+    background-image: url(https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExanB1dzdoYjV6NHNybTYwamRxM3NuczFoNXRiOTBiZDhrbmh1Y2E3eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lKaeQAunM3hZaqsOpj/giphy.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gifJugador {
+
+    background-image: url(https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGVreXo4aXA3bzl6Nm80eXo5NHpzaGEzaDk2MG51dDJxOXk4Y3p6YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dl7r5SBP6aZsdvvVvg/giphy.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+/*===========IMG PLAYER==========*/
+.imgPlayer {
+
+    width: 400px;
+    height: 400px;
+
+}
+
+/*===========IMG BOT=========*/
+
+.imgMaquina {
+    width: 400px;
+    height: 400px;
+
+    /* mantiene proporciones */
+}
+
+/*========IMG ATAQUES================*/
+
+.imgAtaques {
+
+    width: 80px;
+    height: 80px;
+}
+
+/*========IMG ESCUDOS================*/
+
+.imgEscudos {
+
+    width: 60px;
+    height: 80px;
+}
+
+
+/*================BARRA VIDA JUGADOR===========*/
+.barraVidaJugador {
+    width: 200px;
+    /* ancho total */
+    height: 20px;
+    /* alto total */
+    border: 2px solid #000;
+    /* marco negro */
+    background-color: #ccc;
+    /* fondo gris (vacío) */
+    position: relative;
+}
+
+.barraRellenoJugador {
+    height: 100%;
+    width: 100%;
+    /* vida completa al inicio */
+    background-color: green;
+    transition: width 0.5s ease;
+    /* animación suave */
+}
+
+
+/*================BARRA VIDA MAQUINA=========*/
+.barraVidaMaquina {
+    /* ancho total */
+    width: 200px;
+    /* alto total */
+    height: 20px;
+    /* marco negro */
+    border: 2px solid #000;
+    /* fondo gris (vacío) */
+    background-color: #ccc;
+    position: relative;
+}
+
+.barraRellenoMaquina {
+    height: 100%;
+    width: 100%;
+    /* vida completa al inicio */
+    background-color: green;
+    /* animación suave */
+    transition: width 0.5s ease;
+}
+
+/*=============IMG PERDISTE/VITORIA=====================*/
+
+.imgWin,
+.imgLose {
+
+    width: 400px;
+}
+
+/*======================================*/
+
+/*===============IMG/HOVER POCIONES=======================*/
+
+.imgPociones {
+    width: 50px;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+    /* duración y suavizado */
+}
+
+.imgPociones.selected {
+    transform: scale(0.8);
+}
+
+
+
+.imgPociones:hover {
+
+    transform: scale(0.8);
+    transition: 1s;
+}
+
+
+
+/*===============BACKGROUND ZONA DE ATAQUES Y FONDO SECCIÓN DE BATALLA =======================*/
+.fondoAtaques {
+    background-color: black;
+
+}
+
+.fondoJuego {
+
+    background-color: black;
+}
+
+
+.imgAtaques:hover,
+.imgEscudos:hover {
+
+    transform: scale(1.5);
+    transition: transform 0.5s ease forwards;
+}
+
+
+
+
+/* =====================
+   MEDIA QUERIES RESPONSIVE
+   ===================== */
+
+/* Móviles XS (≤575px) */
+@media (max-width: 575px) {
+    body::before {
+        content: "≤575px XS";
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgb(185, 6, 6);
+        color: rgb(0, 0, 0);
+        padding: 5px;
+        z-index: 9999;
+    }
+
+
+
+
+
+
+
+
+    .btnDefensa button {
+        border: 1px solid;
+        height: 80px;
+        width: 80px;
+        font-size: 10px;
+
+    }
+
+    .fsTextJugador,
+    .fsTextMaquina {
+
+        font-size: 10px;
+    }
+
+    .imgPociones {
+        width: 50px;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+        /* duración y suavizado */
+    }
+
+    .fsPots {
+
+        font-size: 10px;
+    }
+
+    .barraVidaJugador,
+    .barraVidaMaquina {
+        width: 140px;
+        /* más corta */
+        height: 16px;
+        /* más bajita */
+
+    }
+
+}
+
+
+/* Móviles verticales SM (576px – 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    body::before {
+        content: "576px-767px SM";
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgb(0, 255, 30);
+        color: rgb(0, 0, 0);
+        padding: 5px;
+        z-index: 9999;
+    }
+
+    .imgPlayer,
+    .imgMaquina {
+        max-width: 170px;
+        max-height: 170px;
+    }
+
+    .responsivePots {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .btnAtacar button {
+        border-radius: 50%;
+        border: 1px solid;
+        height: 100px;
+        width: 100px;
+    }
+
+    .imgAtaques {
+
+        max-width: 100%;
+        width: 50%;
+    }
+
+    .imgEscudos {
+
+        max-width: 100%;
+        width: 50%;
+    }
+
+ 
+
+    .imgPociones {
+        width: 30px;
+        cursor: pointer;
+        transition: transform 0.1s ease;
+    }
+
+
+    .agua,
+    .fuego,
+    .planta {
+        font-size: 13px;
+        display: inline-block;
+        padding: 5px;
+    }
+
+    input {
+
+        margin-bottom: 10px !important;
+    }
+
+
+
+    .btnAtacar button {
+        border: 1px solid;
+        height: 80px;
+        width: 80px;
+        font-size: 13px;
+
+    }
+
+    /* ESTILOS DEL BOTÓN DE POCIONES*/
+    .btnPociones {
+        position: relative;
+        background-color: rgb(253, 255, 253);
+        border-radius: 100%;
+        border: none;
+        width: 50px !important;
+        height: 50px !important;
+        font-size: 20px;
+        box-shadow: 0px 0px 10px 10px rgb(0, 61, 11);
+        z-index: 1000;
+        overflow: hidden;
+    }
+
+   
+
+    .imgAtaques {
+        width: 30px;
+        height: 30px;
+    }
+
+
+    /*========IMG ESCUDOS================*/
+
+    .imgEscudos {
+
+        width: 30px;
+        height: 40px;
+    }
+
+    .styleBtnMobile {
+        position: relative;
+        width: 80px;
+        height: 80px;
+        font-size: 12px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .styleAtaqueMobile,
+    .styleDefensaMobile {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 80%;
+        height: 80%;
+        border-radius: 80%;
+
+        background-color: red;
+
+    }
+
+    /*ESTILOS Y ANIMACIONES DE LOS BOTONES ATACAR Y DEFENDER*/
+
+
+
+
+
+
+}
+
+/* Tablets verticales MD (768px – 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    body::before {
+        content: "768px-991px MD";
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgb(1, 22, 255);
+        color: rgb(0, 0, 0);
+        padding: 5px;
+        z-index: 9999;
+
+    }
+}
+
+/* iPad Pro Vertical (Portrait) */
+@media (min-width: 834px) and (max-width: 1024px) {}
+
+/* Tablets horizontales / laptops pequeñas LG (992px – 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    body::before {
+        content: "992px-1199px LG";
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgb(196, 1, 255);
+        color: rgb(0, 0, 0);
+        padding: 5px;
+        z-index: 9999;
+
+    }
+}
+
+
+/*NEST HUB NORMAL YS I (1200px – 1279px) */
+@media (min-width: 1200px) and (max-width: 1279px) {
+    body::before {
+        content: "1200px-1279px";
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+        padding: 5px;
+        z-index: 9999;
+
+    }
+}
+
+/* iPad Pro Horizontal (Landscape) */
+@media (min-width: 1025px) and (max-width: 1366px) {}
+
+/* NEST HUB MAX Y SIMILARES (1280px – 1399px) */
+@media (min-width: 1280px) and (max-width: 1399px) {
+
+    body::before {
+        content: "1200px-1279px";
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgb(255, 102, 0);
+        color: rgb(255, 255, 255);
+        padding: 5px;
+        z-index: 9999;
+    }
+}
+
+/* Pantallas grandes XXL ≥1400px */
+@media (min-width: 1400px) {
+    body::before {
+        content: "1200px-1279px";
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgb(135, 181, 255);
+        color: rgb(255, 255, 255);
+        padding: 5px;
+        z-index: 9999;
+    }
+}

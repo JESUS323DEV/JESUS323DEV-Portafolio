@@ -1,0 +1,167 @@
+.imgPlayer.atacando {
+    animation: ataqueMago 3s ease;
+}
+
+
+@keyframes ataqueMago {
+
+    5% {
+        transform: translateY(-100px);
+
+    }
+
+    10% {
+        transform: translateX(600px);
+    }
+
+    60% {
+
+        transform: translate(0);
+    }
+}
+
+
+
+
+.imgMaquina.atacando2 {
+    animation: ataqueSlim 3s ease;
+}
+
+@keyframes ataqueSlim {
+
+    5% {
+        transform: translateY(-100px);
+
+    }
+
+    10% {
+        transform: translateX(-600px);
+    }
+
+    60% {
+
+        transform: translate(0);
+    }
+}
+
+
+
+
+.activarPociones {
+    animation: potVida 2s ease forwards;
+}
+
+@keyframes potVida {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    20% {
+
+        filter: brightness(4) drop-shadow(0 0 25px rgb(0, 255, 34));
+        box-shadow: rgb(115, 255, 0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+}
+
+/* colores de brillo según poción */
+.brilloCritico {
+    filter: brightness(4) drop-shadow(0 0 25px rgb(246, 255, 0));
+    box-shadow: yellow;
+}
+
+
+
+.brilloDefensa {
+    filter: brightness(4) drop-shadow(0 0 25px purple);
+    box-shadow: purple;
+}
+
+
+
+
+
+/*ANIMACIONES BTN ATAQUE MOSTRAR OCULTAR*/
+.styleAtaque {
+    animation: btnAtaque 2s ease forwards;
+}
+
+@keyframes btnAtaque {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.styleAtaqueActive {
+
+    animation: ataqueActive 2s ease forwards;
+
+}
+
+@keyframes ataqueActive {
+
+    0% {
+
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+/*ANIMACIONES BTN DEFENSA MOSTRAR OCULTAR*/
+.styleDefensa {
+    animation: defensa 2s ease forwards;
+}
+
+@keyframes defensa {
+
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+
+
+    }
+}
+
+
+
+.styleDefensaActiva {
+
+    animation: defensaActiva 2s ease forwards;
+}
+
+@keyframes defensaActiva {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}

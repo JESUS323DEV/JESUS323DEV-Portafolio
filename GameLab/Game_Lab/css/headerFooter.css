@@ -1,0 +1,9 @@
+.loginFooter {
+    background: linear-gradient(to left, rgb(34, 1, 90), rgb(1, 56, 52));
+
+}
+
+.contHeader {
+    background: linear-gradient(to right, rgb(34, 1, 90), rgb(1, 56, 52));
+    color: #e0e0e0;
+}

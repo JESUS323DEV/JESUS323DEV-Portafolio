@@ -1,0 +1,248 @@
+/*Oscurece Background img*/
+.bgSection {
+    background-image: url("../media/img/bgLogin.jpg");
+    /* capa oscura */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* combina los dos */
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+
+}
+
+/*TEXTO DE BIENVENIDA*/
+.textPrincipal {
+
+    font-size: 1.5rem;
+    color: #fffc63;
+
+}
+
+
+/*background login */
+.bgLogin {
+
+    background-color: rgba(0, 0, 0, 0.5);
+    /* capa oscura */
+    background-blend-mode: multiply;
+    /* combina los dos */
+    background-size: cover;
+    background-position: center;
+}
+
+.bgLogin h3 {
+
+    color: red;
+}
+
+
+
+
+/*CONTENEDOR DEL LOGIN*/
+.contLogin {
+
+    padding: 20px;
+
+}
+
+/*CAMPOS INPUT CONTRASEÑA Y USUARIO*/
+.contLogin input {
+
+    padding: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    opacity: 0.8;
+
+    width: 30%;
+}
+
+.contLogin input::placeholder {
+    color: rgb(0, 0, 0);
+    text-align: start;
+}
+
+
+.contLogin input:focus {
+    border: 2px solid rgb(167, 45, 255);
+    outline: none;
+
+}
+
+/*BOTONES*/
+/*btn readme*/
+
+.btnReadme {
+
+    padding: 10px;
+    width: 15%;
+    background: linear-gradient(to right, rgb(35, 42, 135), rgb(1, 56, 52));
+    color: rgb(243, 243, 245);
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 1px;
+}
+
+.btnReadme:hover {
+
+    box-shadow: 4px 4px 8px #15c2c8, -4px -4px 8px #0fa2a7;
+    transform: scale(1.05);
+}
+
+/*btn login*/
+.btnLogin {
+    padding: 10px;
+    width: 35%;
+    background: linear-gradient(to right, rgb(145, 145, 146), rgb(110, 165, 233));
+    color: black;
+    font-weight: bold;
+    border: 1px solid;
+    border-radius: 1px;
+
+}
+
+.btnLogin:hover {
+
+
+    box-shadow: 4px 4px 8px #1ff5fc, -4px -4px 8px #75faff;
+    transform: scale(1.05);
+}
+
+
+label[for="recordarContra"],
+label.text-white.border.w-50 {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* =====================
+   MEDIA QUERIES RESPONSIVE
+   ===================== */
+
+/* Móviles XS (≤575px) */
+@media (max-width: 575px) {
+    body::before {
+        content: "≤575px XS";
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgb(185, 6, 6);
+        color: rgb(0, 0, 0);
+        padding: 5px;
+        z-index: 9999;
+    }
+
+    .cont-w-100 {
+
+        max-width: 100 !important;
+        width: 100% !important;
+
+    }
+
+    .bgSection {
+
+        height: auto;
+        background-position: center;
+    }
+
+
+
+}
+
+/* Móviles verticales SM (576px – 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    body::before {
+        content: "576px-767px SM";
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgb(0, 255, 30);
+        color: rgb(0, 0, 0);
+        padding: 5px;
+        z-index: 9999;
+    }
+
+}
+
+/* Tablets verticales MD (768px – 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    body::before {
+        content: "768px-991px MD";
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgb(1, 22, 255);
+        color: rgb(0, 0, 0);
+        padding: 5px;
+        z-index: 9999;
+    }
+
+}
+
+/* iPad Pro Vertical (Portrait) */
+@media (min-width: 834px) and (max-width: 1024px) {}
+
+/* Tablets horizontales / laptops pequeñas LG (992px – 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    body::before {
+        content: "992px-1199px LG";
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgb(196, 1, 255);
+        color: rgb(0, 0, 0);
+        padding: 5px;
+        z-index: 9999;
+    }
+
+}
+
+
+/*NEST HUB NORMAL YS I (1200px – 1279px) */
+@media (min-width: 1200px) and (max-width: 1279px) {
+    body::before {
+        content: "1200px-1279px";
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+        padding: 5px;
+        z-index: 9999;
+    }
+
+}
+
+/* iPad Pro Horizontal (Landscape) */
+@media (min-width: 1025px) and (max-width: 1366px) {}
+
+/* NEST HUB MAX Y SIMILARES (1280px – 1399px) */
+@media (min-width: 1280px) and (max-width: 1399px) {
+
+    body::before {
+        content: "1200px-1279px";
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgb(255, 102, 0);
+        color: rgb(255, 255, 255);
+        padding: 5px;
+        z-index: 9999;
+    }
+}
+
+/* Pantallas grandes XXL ≥1400px */
+@media (min-width: 1400px) {
+    body::before {
+        content: "1200px-1279px";
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgb(135, 181, 255);
+        color: rgb(255, 255, 255);
+        padding: 5px;
+        z-index: 9999;
+    }
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Yisus">
+    <meta name="description"
+        content="GAME-LAB Web personal donde muestro mi progreso aprendiendo JavaScript aplicado en minijuegos. Cada juego representa una etapa de mi aprendizaje: desde prácticas simples hasta pequeños proyectos con lógica, turnos y efectos visuales.">
+    <meta name="keywords" content="html, css, javascript, game-lab, Yisus , jueguitos,">
+
+    <!--!bootstrap-css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/headerFooter.css">
+    <link rel="stylesheet" href="../css/tragaMonedas.css">
+
+
+    <title>Minijuegos - YisusGames - Adivina la carta (apostando)</title>
+</head>
+
+<body>
+
+
+    <header>
+        <div class="contHeader">
+
+            <h1 class="text-center text-white p-4">Minijuegos - YisusGames - Adivina la carta (apostando)</h1>
+            <div class="text-center">
+                <button id="btnBackLogin">Login</button>
+            </div>
+
+        </div>
+    </header>
+
+    <!--!ADIVINA LA CARTA (APOSTANDO) DESCRIPCIÓN -->
+    <div class="container shadow">
+
+        <div class="fs-3 p-3">
+            <h3 class="text-center py-3 fs-2">Adivina la carta (apostando)</h3>
+            <p>Este minijuego lo hice para practicar números aleatorios, condicionales y control de flujo en JavaScript.
+                La idea es simple: adivinar la siguiente carta, mientras gestionas tus apuestas y
+                tu suerte 😏.</p>
+        </div>
+
+        <!--todo: Reglas del juego:-->
+        <div class="row">
+            <div class="col-12 col-lg-4 p-3 d-flex flex-column text-center border">
+                <h5 class="mb-4 ">Reglas del juego:</h5>
+                <p>Antes de cada turno, eliges tu apuesta y seleccionas una carta.</p>
+                <p>Luego la maquina decide.</p>
+                <p>Si aciertas, dependiendo de lo elegido ganas x2, x3 o x5 de lo apostado.</p>
+                <p>Si fallas, pierdes la apuesta.</p>
+            </div>
+
+            <!--todo: Cómo se juega:-->
+            <div class="col-12 col-lg-4 p-3 d-flex flex-column text-center border">
+                <h5 class="mb-4">Cómo se juega:</h5>
+                <p>Ingresa tu apuesta.</p>
+                <p>Elige una carta.</p>
+                <p>Según el resultado, ganas x2, x3 o x5 de lo apostado.</p>
+                <p>El juego termina cuando te quedas sin monedas.</p>
+            </div>
+
+
+            <!--todo: Próximos pasos-->
+            <div class="col-12 col-lg-4 p-3 text-start border ">
+                <h5 class="mb-4 text-center">Próximos pasos</h5>
+                <ul>
+                    <li><del>Responsividad total</del></li>
+                    <li><del>Agregar límite de apuesta máximo.</del></li>
+                    <li>Añadir animación al mostrar las cartas.</li>
+                    <li>Incluir efectos de sonido al ganar o perder.</li>
+                    <li>Agregar sonidos de clic y resultado (ganar, perder, empate).</li>
+                    <li>Mejorar el diseño visual con iconos o imágenes animadas.</li>
+                    <li>Optimizar el código y separar la lógica del diseño.</li>
+                    <li>Mostrar historial de partidas.</li>
+                </ul>
+
+            </div>
+        </div>s
+
+    </div>
+    <!--!SECCIÓN DEL JUEGO ADIVINA LA CARTA (APOSTANDO)-->
+    <section>
+        <div class="container border fondo mt-5">
+
+            <div class=" d-flex gap-5 flex-row align-items-center justify-content-center cont-img  text-center mt-5">
+                <!-- todo: IMG+RADIO-->
+                <div class="d-flex flex-column text-white" id="divRadio0">
+                    <img id="slotCerezaImg" class="img-fluid mx-auto" src="../media/img/tragamonedas/cereza.png" alt="">
+                    <input class="mt-3" type="radio" name="slots" id="slotCereza" value="slotCereza">
+                    <label for="slotCereza">Cereza apuesta x2</label>
+                </div>
+
+                <div class="d-flex flex-column text-white" id="divRadio1">
+                    <img id="slotDiamanteImg" class="img-fluid" src="../media/img/tragamonedas/diamante.png" alt="">
+                    <input class="mt-3" type="radio" name="slots" id="slotDiamante" value="slotDiamante">
+                    <label for="slotDiamante">Diamante apuesta x3</label>
+                </div>
+
+                <div class="d-flex flex-column text-white" id="divRadio2">
+                    <img id="slot7Img" class="img-fluid" src="../media/img/tragamonedas/seven.png" alt="">
+                    <input class="mt-3" type="radio" name="slots" id="slot7" value="slot7">
+                    <label for="slot7">Seven apuesta x5</label>
+                </div>
+            </div>
+
+
+            <!-- todo: texto-->
+            <div>
+                <p class="premioGordo textGordo"></p>
+                <p class="premioMedio textMedio"></p>
+                <p class="premioChico textChico"></p>
+                <p class="perdiste textPerdiste"></p>
+                <p class="ultimoResultado"></p>
+            </div>
+            <div class="text-center my-2 text-white">
+                <p class="fs-2 selectText"></p>
+                <p> Apuesta minima = 10 monedas</p>
+            </div>
+
+            <div class=" text-center mt-3">
+                <input type="number" id="inpApostar" placeholder="Has tu apuesta">
+                <button id="btnJugar" class="btnJugar d-inline-block">Jugar</button>
+                <button id="btnReset" class="btnReset d-inline-block d-none">Reset</button>
+            </div>
+
+            <p class="textMonedas monedas"></p>
+        </div>
+    </section>
+
+
+
+    <!-- todo: Botones-->
+    <div class="text-center my-5 ">
+        <button id="btnBack" class="btn btn-primary btn-lg mx-0 mx-lg-5 ">Anterior</button>
+        <button id="btnNext" class="btn btn-primary btn-lg mx-0 mx-lg-5 ">Siguiente</button>
+    </div>
+
+
+
+
+    <footer class="bg-body-secondary  border p-2 loginFooter">
+        <div class="container text-center">
+            <p class="py-3 text-white">© 2025 GameLab — Proyecto personal de Yisus.
+                Desarrollado con HTML, CSS y JavaScript.</p>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="../js/tragaMonedas.js"></script>
+</body>
+
+</html>
