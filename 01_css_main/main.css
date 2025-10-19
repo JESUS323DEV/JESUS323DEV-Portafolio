@@ -131,16 +131,10 @@ body {
 }
 
 
-
-
-
 /* 💡 FOCUS EN SUMMARY (VSCode style) */
 .barraLateral summary:focus {
     background-color: #383838;
 }
-
-
-
 
 /* ─────────────────────────────── */
 /* 🏠 SECCIÓN INICIO */
@@ -251,7 +245,7 @@ body {
 
 .gitHome a {
 
-    color: rgb(17, 255, 0);
+    color: rgb(255, 238, 2);
     text-decoration: none;
 }
 
