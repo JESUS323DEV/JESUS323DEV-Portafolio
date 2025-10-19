@@ -1,0 +1,275 @@
+/* 🎨 RESET GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 🌑 BASE GLOBAL */
+html,
+body {
+    background-color: #1E1E1E;
+    color: white;
+    padding: 0;
+    margin: 0;
+    font-family: "Source Code Pro", monospace;
+    font-style: normal;
+}
+
+/* 🔧 FIX BOOTSTRAP SCROLL (evita margen negativo en .row) */
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+/* ─────────────────────────────── */
+/* 🧭 NAVBAR */
+/* ─────────────────────────────── */
+
+.navbar {
+    background-color: #1E1E1E;
+}
+
+/* 🧩 LOGO */
+.logo {
+    width: 80px;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    transition: 0.2s ease-in-out;
+}
+
+/* 🔗 LINKS DE NAVEGACIÓN */
+.nav-link {
+    color: rgb(255, 255, 255);
+    border: 0.1px groove rgb(34, 33, 33);
+    border-collapse: collapse;
+}
+
+/* 🎨 ICONOS NAV */
+.styleIconInicio {
+    font-size: 10px;
+    color: rgb(255, 144, 0);
+    font-weight: bold;
+}
+
+.styleIconAbout {
+    font-size: 16px;
+    color: rgb(0, 242, 250);
+}
+
+.styleIconProyectos {
+    font-size: 12px;
+    font-weight: bold;
+    color: yellow;
+}
+
+/* 🧭 NAVBAR HOVER & FOCUS */
+#navbarSupportedContent .nav-link:hover {
+    color: rgb(255, 255, 255);
+}
+
+#navbarSupportedContent .nav-link:focus {
+    background-color: rgb(61, 61, 61);
+    color: rgb(255, 255, 255);
+    border-top: 2px solid rgb(0, 132, 255);
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.7);
+}
+
+/* 🧾 MENÚ DE NAVEGACIÓN */
+.menuNav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* 🧭 UL INTERNO DEL MENÚ */
+.ulStyle {
+    width: 100%;
+    background-color: rgb(20, 20, 20);
+    margin: auto;
+}
+
+.ulStyle ul {
+    margin-left: 39%;
+}
+
+/* 🎨 COLOR PERSISTENTE AL HACER FOCUS FUERA */
+.nav-link.activo,
+.nav-link:focus {
+    width: 100%;
+    background-color: rgb(61, 61, 61);
+    color: rgb(255, 255, 255);
+    border-top: 2px solid rgb(0, 132, 255);
+}
+
+/* ─────────────────────────────── */
+/* 📂 BARRA LATERAL */
+/* ─────────────────────────────── */
+
+.barraLateral {
+    min-height: 100vh;
+    background-color: #181818;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.7);
+    border: 1px solid rgb(37, 37, 37);
+
+    padding: 20px;
+}
+
+.barraLateral summary::-webkit-details-marker {
+    display: none;
+}
+
+.barraLateral summary {
+
+    padding: 6px;
+    list-style: none;
+
+}
+
+
+
+
+
+/* 💡 FOCUS EN SUMMARY (VSCode style) */
+.barraLateral summary:focus {
+    background-color: #383838;
+}
+
+
+
+
+/* ─────────────────────────────── */
+/* 🏠 SECCIÓN INICIO */
+/* ─────────────────────────────── */
+
+.mainInicio {
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.7);
+    min-height: 100vh;
+}
+
+.mainInicio section {
+    max-width: 100%;
+}
+
+/* 🧱 TITULOS INICIO */
+.sectionInicioH2 h2 {
+    margin-top: 1%;
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+}
+
+.sectionInicioH2 p {
+    color: rgb(3, 79, 255);
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.sectionInicioH2 small {
+    font-size: 4rem;
+}
+
+/* 📜 TEXTO PRINCIPAL */
+.sectionInicioP p {
+    color: rgb(50, 241, 255);
+    font-size: 1.3rem;
+}
+
+.sectionInicioP small {
+    color: rgb(255, 225, 0);
+    font-size: 12px;
+}
+
+/* 🌈 COLOR EXTRA (por clase personalizada) */
+.colorP {
+    color: rgb(0, 252, 0) !important;
+}
+
+/* 📏 BARRA NÚMEROS DE LÍNEAS */
+.barraNumLineas {
+    margin: 0;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.7);
+    border: 1px solid rgb(37, 37, 37);
+    border-collapse: collapse;
+}
+
+
+
+.icono {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.icono.rotar {
+    transform: rotate(90deg);
+}
+
+.barraExtensiones {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid rgb(30, 30, 30);
+    background-color: #181818;
+}
+
+.barraExtensiones i {
+
+    font-size: 1.9rem;
+    color: rgb(190, 190, 190);
+    padding: 8px;
+}
+
+
+
+.barraExtensiones button {
+    background-color: #181818;
+    border: none !important;
+
+}
+
+.barraExtensiones button.activo,
+.barraExtensiones button.activo i {
+    color: white !important;
+    border-left: 1px solid rgb(58, 137, 255);
+    width: 100%;
+}
+
+
+.gitHome {
+    display: flex;
+    gap: 30px;
+}
+
+.gitHome p {
+
+    margin-top: 15px;
+}
+
+.gitHome a {
+
+    color: rgb(17, 255, 0);
+    text-decoration: none;
+}
+
+
+
+
+
+.gitHome img {
+
+    width: 60px;
+
+
+}
+
+.gitHome i {
+
+    margin-left: 80%;
+    margin-right: 0;
+
+
+}

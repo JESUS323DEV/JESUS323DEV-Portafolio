@@ -1,0 +1,162 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos base para body y html */
+body,
+html {
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Títulos principales */
+.cont-tittle {
+    font-size: 3rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+/* Imagen de fondo para header */
+header {
+    background-image: url(../media/img/terraza-noche-real.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Utilidad para altura mínima 70vh */
+.min-vh-70 {
+    min-height: 70vh;
+}
+
+/* Espaciado en lista principal */
+.list-main li {
+    margin-bottom: 1rem;
+}
+
+/* Fuentes para títulos */
+h1, h2, h3, h4, h5 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
+}
+
+/* Fuentes para párrafos y listas */
+p,
+li {
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Espacio entre texto y enlaces en footer */
+footer p a {
+    margin-left: 0.5rem;
+}
+
+/*---------------------------*/
+
+
+#scrollToTop {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background: #000000;
+  color: white;
+  font-size: 2rem;
+  padding: 0.6rem;
+  border-radius: 5%;
+  text-align: center;
+  cursor: pointer;
+  display: none; /* Oculto por defecto */
+  z-index: 1000;
+  text-decoration: none;
+}
+
+#scrollToTop:hover {
+  background: #0056b3;
+}
+
+
+/* --------------------------- */
+/* MEDIA QUERIES PARA MÓVILES  */
+/* --------------------------- */
+@media (max-width: 767.98px) {
+    header {
+        text-align: center;
+    }
+
+    #navbarContenido {
+        padding: 0;
+        margin: 0;
+        background-color: rgb(27, 74, 131);
+        /* negro con 50% de opacidad */
+        position: absolute;
+        top: 190px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        max-width: 100%;
+        border-radius: 8px;
+        border: 1px solid yellow;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        padding: 1rem;
+        z-index: 1050;
+    }
+
+    .navbar-toggler {
+        margin-top: 4rem;
+    }
+
+    .list-main {
+        margin: 0 !important;
+        font-size: 1.2rem !important;
+    }
+
+    .img-fluid {
+        margin: 0;
+    }
+
+    .cont-tittle {
+        font-size: 1.7rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+}
+
+/* --------------------------- */
+/* MEDIA QUERIES PARA TABLETS  */
+/* --------------------------- */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    #navbarContenido {
+        padding: 0;
+        margin: 0;
+        background-color: rgb(27, 74, 131);
+        /* negro con 50% de opacidad */
+        position: absolute;
+        top: 150px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        max-width: 100%;
+        border-radius: 8px;
+        border: 1px solid yellow;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        padding: 1rem;
+        z-index: 1050;
+    }
+
+    /* Cambiar dirección de nav-items a fila */
+    #navbarContenido .navbar-nav {
+        flex-direction: row !important;  /* Forzar fila horizontal */
+        justify-content: center;          /* Centrar los items */
+        width: 100%;
+    }
+
+    #navbarContenido .nav-item {
+        margin: 0 5px;                   /* Separar links horizontalmente */
+    }
+}

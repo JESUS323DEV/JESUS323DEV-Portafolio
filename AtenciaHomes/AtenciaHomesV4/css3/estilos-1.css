@@ -1,0 +1,783 @@
+/* =====================
+   Reset Básico
+   ===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Merriweather", serif !important;
+    font-optical-sizing: auto !important;
+    font-style: normal !important;
+    font-weight: bold !important;
+}
+
+
+
+
+p,ul,li {
+
+    font-family: "STIX Two Text", serif !important;
+    font-optical-sizing: auto !important;
+    font-style: normal !important;
+}
+    
+
+
+/* =====================
+   Logo Principal
+   ===================== */
+.logo-img {
+    max-width: 150px;
+}
+
+.logo-foot {
+
+    max-width: 200px;
+}
+
+
+/* =====================
+   Navbar Estilos
+   ===================== */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand {
+    margin: 0 !important;
+    padding: 0 !important;
+
+}
+
+.navbar {
+    background-color: transparent;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+/* =====================
+   Navbar Estilos-scrolled-js
+   ===================== */
+.navbar.scrolled {
+    background-image: url(../media/img/nav_background_color.png);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: black !important;
+}
+
+
+
+.navbar a {
+    color: white !important;
+    transition: color 0.1s ease;
+}
+
+.navbar.scrolled a {
+    color: white !important;
+}
+
+
+/* =====================
+   Barra de color decorativa 
+   ===================== */
+.barra-color-azul {
+    width: 60%;
+    height: 5px;
+    background-color: #154360;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.barra-color-yellow {
+
+    width: 90%;
+    height: 5px;
+    margin: auto;
+    background-color: #ffc800;
+    margin-top: 1rem;
+}
+
+.barra-color-card {
+
+    width: 50%;
+    height: 5px;
+    background-color: #ffc800;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+
+.barra-quienes-somos {
+
+    width: 26%;
+    height: 5px;
+    background-color: #ffc800;
+    margin-left: 8%;
+}
+
+.barra-diferencia {
+
+    width: 40%;
+    height: 5px;
+    background-color: #ffc800;
+    margin: auto;
+
+}
+
+
+
+
+/* =====================
+   Fondo principal del header
+   ===================== */
+.fondo-nav-menu {
+    background-image: url(../media/img/terraza-noche-oscura.png);
+    background-size: cover;
+    background-position: center;
+    min-height: 95vh;
+    padding-top: 130px;
+    padding-bottom: 80px;
+}
+
+
+/* =====================
+   Sección 1
+   ===================== */
+
+.img-seccion1 {
+
+    max-width: 100%;
+    width: 550px;
+    margin-top: 12%;
+    border-radius: 1rem;
+}
+
+/* =====================
+   Sección 2
+   ===================== */
+
+.cont-card {
+
+    max-width: 100%;
+    width: 20%;
+    height: auto;
+}
+
+.h-img {
+
+    height: 38%;
+}
+
+
+/* =====================
+   Sección 3
+   ===================== */
+
+.cont-texto-section3 {
+
+    max-width: 100%;
+    max-width: 75%;
+    margin-left: 8%;
+}
+
+.img-section3 {
+
+    max-width: 500px;
+
+}
+
+
+/* =====================
+   Botón principal CTA
+   ===================== */
+.btn-principal {
+    background-color: #154360;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 1rem !important;
+
+}
+
+
+
+.btn-nav-fijo {
+
+    background-color: #154360;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 0.5rem !important;
+
+}
+
+.btn-principal:focus,
+.btn-nav-fijo:focus {
+    outline: none;
+    background-color: #154360;
+    color: white;
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+}
+
+
+
+
+
+
+
+/* =====================
+   Lista de problemas
+   ===================== */
+.list-problemas {
+    font-size: 1.2rem;
+}
+
+
+
+
+/* =====================
+   Título secciones fondo
+   ===================== */
+.fondo-tittle {
+    background-image: url(../media/img/fondo-anochecer.jpg);
+    background-size: cover;
+}
+
+
+
+/* =====================
+   Colores Iconos-Main
+   ===================== */
+
+.cont-color-icon {
+
+    color: #154360;
+}
+
+.size-icon {
+
+    font-size: 4rem;
+    color: #154360
+}
+
+
+/* =====================
+   Subtítulos decorativos
+   ===================== */
+.sub-tittle {
+    padding: 1rem;
+    color: #154360;
+    font-size: 1.8rem;
+}
+
+.tittle-card {
+
+    padding: 0.3rem;
+    color: #154360;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+
+
+
+/* =====================
+   Colores de texto principales
+   ===================== */
+.color-text1 {
+    color: #ffc800;
+}
+
+.font-size-h1 {
+    font-size: 4rem;
+}
+
+/* =====================
+   FOOTER
+   ===================== */
+
+.fondo-foot {
+
+    background-image: url(../media/img/nav_background_color.png);
+}
+
+/* =====================
+   Media Queries
+   ===================== */
+
+/* XS (≤575.98px): móviles “standard” */
+
+/* ========================================== */
+@media (max-width: 575.98px) {
+    body::before {
+        content: "XS activo";
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: crimson;
+        color: white;
+        padding: 5px;
+        z-index: 9999;
+    }
+
+    /* ========================================== */
+
+    #navbarSupportedContent {
+        background-color: rgb(27, 74, 131);
+        position: fixed;
+        top: 90px;
+        left: 0;
+        right: 0;
+        max-width: 100%;
+        border-radius: 8px;
+        border: 1px solid yellow;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        padding: 1rem;
+        z-index: 9999;
+    }
+
+
+    .navbar-toggler {
+        margin-right: auto;
+        margin-left: 0;
+
+    }
+
+    .navbar-toggler:hover {
+
+        color: white;
+    }
+
+    .logo-img {
+        width: 150px;
+    }
+
+    .fondo-nav-menu {
+        background-size: cover;
+        background-position: center;
+        padding-top: 150px;
+        min-height: auto;
+    }
+
+    .cont-w-100 {
+        width: 100% !important;
+    }
+
+    .font-size-h1 {
+        font-size: 2.2rem;
+    }
+
+    .list-problemas {
+        font-size: 1.2rem;
+    }
+
+ 
+
+    .list-problemas li {
+        padding: 0 !important;
+    }
+
+    .img-seccion1 {
+
+        max-width: 100%;
+        width: 600px;
+        height: auto !important;
+        margin-top: 0 !important;
+    }
+
+    .barra-color-yellow {
+
+        width: 100%;
+        height: 5px;
+        background-color: #ffc800;
+    }
+
+    .barra-color-azul {
+        width: 90%;
+        height: 5px;
+        background-color: #154360;
+        margin-bottom: 1.5rem;
+
+    }
+
+    .btn-nav-fijo {
+        background-color: #154360;
+        color: white;
+        font-weight: bold;
+        border-radius: 8px;
+        border: none;
+        text-decoration: none;
+        cursor: pointer;
+        padding: 0.3rem;
+        font-size: 0.9rem !important;
+
+
+
+
+    }
+
+
+    .cont-card {
+
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    .img-section3 {
+
+        max-width: 300px;
+
+    }
+
+    .barra-quienes-somos {
+
+        width: 60%;
+        height: 5px;
+        background-color: #ffc800;
+        margin-left: 25%;
+    }
+
+    .cont-texto-section3 {
+
+        max-width: 100%;
+        max-width: 100%;
+        margin-left: 0 !important;
+        padding: 1.5rem;
+        text-align: center;
+
+    }
+
+    .logo-foot {
+
+        max-width: 150px;
+    }
+
+
+
+
+}
+
+
+/* ========================================== */
+/* SM (576px–767.98px): móviles y phablets horizontales */
+/* ========================================== */
+
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    /* ========================================== */
+
+    body::before {
+        content: "SM activo";
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: green;
+        color: white;
+        padding: 5px;
+        z-index: 9999;
+    }
+
+    /* ========================================== */
+
+
+    #navbarSupportedContent {
+        background-color: rgb(27, 74, 131);
+        position: fixed;
+        top: 100px;
+        left: 0;
+        right: 0;
+        max-width: 100%;
+        border-radius: 8px;
+        border: 1px solid yellow;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        padding: 1rem;
+        z-index: 9999;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    .logo-img {
+        max-width: 100px;
+    }
+
+    .text-center {
+        font-size: 2rem;
+    }
+
+    .fondo-nav-menu {
+        background-size: cover;
+        background-position: center;
+        min-height: 5vh !important;
+    }
+
+    .cont-w-100 {
+        width: 100% !important;
+    }
+
+
+    .cont-card {
+
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    .barra-quienes-somos {
+
+        width: 45%;
+        height: 5px;
+        background-color: #ffc800;
+        margin: auto;
+
+    }
+    .size-icon {
+
+    font-size: 5rem;
+    color: #154360
+}
+}
+
+
+/* MD (768px - 991.98px): tablets verticales */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    body::before {
+        content: "MD activo";
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgb(0, 13, 255);
+        color: white;
+        padding: 5px;
+        z-index: 9999;
+    }
+
+    #navbarSupportedContent {
+        background-color: rgb(27, 74, 131);
+        position: fixed;
+        top: 85px;
+        left: 0;
+        right: 0;
+        max-width: 100%;
+        border-radius: 8px;
+        border: 1px solid yellow;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        padding: 1rem;
+        z-index: 9999;
+    }
+
+    .navbar-toggler {
+        margin-right: auto;
+        margin-left: 1rem;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .fondo-nav-menu {
+        min-height: auto;
+        padding-top: 100px;
+
+    }
+
+    .cont-w-100 {
+        width: 100% !important;
+    }
+
+    .cont-card {
+
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+
+    .barra-quienes-somos {
+
+        width: 40%;
+        height: 5px;
+        background-color: #ffc800;
+        margin: auto;
+    }
+
+    .cont-texto-section3 {
+
+        max-width: 100%;
+        max-width: 100%;
+        margin-left: 0 !important;
+        padding: 1.5rem;
+        text-align: center;
+
+    }
+
+
+
+}
+
+
+/* LG (992px–1199.98px): tablets horizontales, mini laptops */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    body::before {
+        content: "portrait activo";
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        padding: 5px;
+        z-index: 9999;
+    }
+
+    .navbar-toggler {
+        margin: auto !important;
+    }
+
+
+
+    .cont-w-100 {
+        width: 100% !important;
+    }
+
+    .cont-center {
+        text-align: center !important;
+        margin-top: 10rem !important;
+    }
+
+    .fondo-nav-menu {
+        min-height: 80vh;
+        padding-top: 120px;
+    }
+
+    .navbar-ipad-pro {
+
+        font-size: 1.1rem;
+    }
+
+    .logo-img {
+        max-width: 150px;
+
+    }
+
+
+    .cont-card {
+
+        max-width: 100%;
+        width: 30%;
+        height: auto;
+    }
+
+    .h-img {
+
+        height: 33%;
+    }
+
+    .cont-pro {
+
+        display: flex;
+        gap: 2rem;
+
+    }
+
+    .img-seccion1 {
+
+        max-width: 100%;
+        width: 550px;
+        padding: 2rem;
+    }
+
+    .img-section3 {
+
+        max-width: 400px;
+
+    }
+
+    .barra-quienes-somos {
+
+        width: 40%;
+        height: 5px;
+        background-color: #ffc800;
+        margin-left: 10%;
+
+
+    }
+
+
+}
+
+@media (min-width: 1366px) and (max-width: 1366px) {
+
+    body::before {
+        content: "portrait activo";
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgb(255, 225, 0);
+        color: rgb(0, 0, 0);
+        padding: 5px;
+        z-index: 9999;
+    }
+
+    .img-seccion1 {
+
+        max-width: 100%;
+        width: 600px;
+        padding: 2rem;
+    }
+
+    .h-img {
+
+        height: 31%;
+    }
+
+    .barra-quienes-somos {
+
+        width: 36%;
+        height: 5px;
+        background-color: #ffc800;
+    }
+
+    .barra-color-yellow {
+
+        width: 50%;
+        height: 5px;
+        background-color: #ffc800;
+    }
+
+    .sub-tittle {
+        padding: 1rem;
+        color: #154360;
+        font-size: 1.8rem;
+
+    }
+
+}

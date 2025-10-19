@@ -1,0 +1,893 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+
+    color: rgb(3, 183, 243);
+}
+
+p {
+
+    color: white;
+}
+
+hr {
+
+    margin: 4rem auto 4rem auto;
+    max-width: 60%;
+    border: 1px solid rgb(160, 159, 159);
+}
+
+@media (max-width:768px) {
+
+    hr {
+
+        margin: 3rem auto 3rem auto;
+        padding: 0;
+    }
+}
+
+
+.flecha-arriba {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgb(0, 52, 87);
+
+    color: #fff;
+    text-decoration: none;
+    padding: 1%;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
+
+
+@media (max-width: 600px) {
+    .flecha-arriba {
+        bottom: 15px;
+        right: 5px;
+        padding: 10px 14px;
+        font-size: 18px;
+        border-radius: 10%;
+    }
+}
+
+/*--------------------------Header-contenedor-principal-logo-img--------------------*/
+.fondo-img {
+    background-image: url(../imagenes/terraza-noche-real.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    image-rendering: auto;
+    width: auto;
+}
+
+.logo {
+    max-width: 130px;
+    margin-right: 10%;
+
+}
+
+/*------AQUÍ EMPIEZA EL MENU-------*/
+.cont-menu {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+.cont-menu nav ul {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5em;
+    list-style-type: none;
+
+}
+
+.cont-menu nav ul li a {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.cont-menu nav ul li a:hover {
+    color: rgb(3, 183, 243);
+
+    transform: scale(1.2);
+}
+
+/*-----TEXTO DEL HEADER-----*/
+.cont-texto {
+    color: white;
+    flex-wrap: wrap;
+    max-width: 100%;
+    width: 90%;
+    margin: auto;
+    text-align: left;
+
+}
+
+.cont-texto h3 {
+
+    color: rgb(252, 218, 0);
+    font-size: 1rem;
+
+
+}
+
+.cont-texto h1 {
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+
+}
+
+
+.contacto {
+
+    width: fit-content;
+    padding: 1rem;
+    margin-top: 4rem;
+    background-color: rgb(0, 52, 87);
+    border-radius: 10px;
+}
+
+.contacto a {
+    color: rgb(252, 218, 0);
+    font-size: 2rem;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* El menú hamburguesa solo se verá en dispositivos móviles */
+.menu-toggle {
+    display: none;
+    /* Oculto por defecto */
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Media queries para pantallas pequeñas */
+
+@media (max-width:768px) {
+    .fondo-img {
+        max-width: 100%;
+        height: 850px;
+        padding: 0;
+        
+    }
+
+    .cont-menu {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+
+    .logo {
+        max-width: 100%;
+        width: 210px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        width: 30%;
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Fondo oscuro */
+        border: 1px solid rgb(252, 218, 0);
+    }
+
+    .cont-texto {
+
+        max-width: 100%;
+        text-align: center;
+        width: 100%;
+        padding: 20px;
+        background-color: rgb(0, 0, 0, 0.4);
+
+
+
+
+
+    }
+
+    .cont-texto h1 {
+
+        font-size: 2rem;
+
+    }
+
+    .cont-texto h3 {
+
+        font-size: 1.3rem;
+
+    }
+
+    .contacto {
+
+        max-width: 100%;
+        margin: auto;
+    }
+
+
+
+    /* En pantallas pequeñas, mostrar el botón de menú hamburguesa */
+    @media (max-width: 768px) {
+        .menu-toggle {
+            display: block;
+        }
+
+        #nav-menu {
+            display: none;
+            
+            /* Ocultar el menú por defecto en móviles */
+            position: absolute;
+            bottom: 7rem;
+            width: 100%;
+            background-color: rgb(0, 52, 87);
+            text-align: center;
+            border: 1px solid rgb(252, 218, 0);
+        }
+
+        #nav-menu ul {
+            display: block;
+
+        }
+
+        #nav-menu ul li {
+            padding: 0.5rem;
+            text-align: left;
+
+        }
+
+        #nav-menu ul li a {
+            color: rgb(252, 218, 0);
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+
+        #nav-menu.active {
+            display: block;
+            /* Mostrar el menú cuando tenga la clase active */
+        }
+    }
+
+    /* Estilos adicionales para mantener el diseño en escritorio */
+    @media (min-width: 769px) {
+        #nav-menu {
+            display: flex;
+            justify-content: center;
+        }
+
+        #nav-menu ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        #nav-menu ul li a {
+            text-decoration: none;
+            font-size: 1rem;
+        }
+    }
+
+}
+
+
+/*-------AQUÍ TERMINA EL HEADER----*/
+/*----AQUÍ EMPIEZA EL MAIN----*/
+
+/*---HAS PASADO ALGUNA DE ESTAS SITUACIONES?---*/
+
+.cont-fondo-h2 {
+    margin: 6rem 0 1rem 6rem;
+    width: fit-content;
+    font-size: 3.5rem;
+}
+
+.cont-fondo-p {
+    margin: 2rem 0 0 6rem;
+    font-size: 1.5rem;
+    color: rgb(252, 218, 0);
+    background-image: url(../imagenes/fondo-anochecer.jpg);
+    max-width: 90%;
+    padding: 1.5rem;
+}
+
+.cont-list-img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 100%;
+}
+
+
+.cont-list-img img {
+    max-width: 700px;
+    padding: 2rem;
+}
+
+.cont-list-img ul {
+
+
+    padding: 5rem;
+}
+
+.cont-list-img li {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    color: white;
+
+
+}
+
+
+/*----li::marker--- para editar item----*/
+.cont-list-img li::marker {
+    color: skyblue;
+    font-size: 1.5em;
+}
+
+/* Media queries para pantallas pequeñas */
+
+
+@media (max-width:768px) {
+
+    .cont-fondo-h2 {
+        margin: 0;
+        font-size: 2.5rem;
+        padding: 1.3rem;
+        text-align: left;
+        
+    }
+
+  
+
+    .cont-fondo-p {
+
+        max-width: 100%;
+        margin: 0;
+        font-size: 1rem;
+        padding: 20px;
+    }
+
+    .cont-list-img ul {
+        max-width: 100%;
+        width: 100%;
+        padding: 30px;
+    }
+
+    .cont-list-img li {
+        max-width: 100%;
+        width: 100%;
+        font-size: 1.2rem;
+        text-align: left;
+
+        padding: 3px;
+
+    }
+
+    .cont-list-img img {
+        display: none;
+    }
+
+    .cont-fondo-p {
+        margin: 0;
+    }
+
+}
+
+/* Contenedor principal- QUIENES SOMOS */
+.cont-principal {
+
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: 6rem 0 0 6rem;
+}
+
+
+.texto-cont {
+
+    flex: 1;
+    flex-wrap: wrap;
+
+
+}
+
+.texto-cont h2 {
+    font-size: 2.8rem;
+    padding: 1rem;
+    margin: 0 4rem;
+
+}
+
+.texto-cont p {
+
+    font-size: 1.1rem;
+    padding: 1rem;
+    line-height: 1.9;
+    margin: 0 4rem;
+}
+
+/* Imagen */
+.cont-img {
+    max-width: 800px;
+    flex: 1;
+    margin: auto;
+    padding: 2%;
+}
+
+/* Media queries para pantallas pequeñas */
+
+@media (max-width:768px) {
+
+   
+
+    .cont-principal {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .cont-principal h2 {
+        font-size: 40px;
+        padding: 1rem;
+        margin: 0;
+    }
+
+    .cont-principal p {
+        font-size: 20px;
+        padding: 1rem;
+        margin: 0;
+        line-height: 1.4;
+    }
+
+    .cont-img {
+        width: 100%;
+    }
+}
+
+/*----COMO FUNCIONA----*/
+
+
+.h2-cont {
+
+    margin: 6rem 0 4rem 6rem;
+    width: fit-content;
+    font-size: 3.5rem;
+}
+
+/*------------*/
+
+.fondo-como-funciona {
+
+    background-image: url(../imagenes/azul-degradado.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 100%;
+    height: 30vh;
+
+
+}
+
+.p-cont {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: auto;
+    text-align: center;
+
+
+}
+
+.p-cont h3 {
+
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: 1.5rem;
+    margin: auto;
+
+}
+
+.p-cont p {
+
+    color: rgb(252, 218, 0);
+    font-size: 1rem;
+    padding: 0.5rem;
+
+}
+
+
+.contacto2 {
+
+    width: fit-content;
+    padding: 1rem;
+    margin: 4rem auto auto auto;
+    background-color: rgb(0, 52, 87);
+    border-radius: 10px;
+}
+
+
+.contacto2 a {
+    color: rgb(252, 218, 0);
+    font-size: 2rem;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Media queries para pantallas pequeñas */
+
+@media (max-width: 768px) {
+
+    .h2-cont {
+
+        margin: 0 0 10% 0;
+        padding: 3px;
+        text-align: center;
+        font-size: 2.7rem;
+    }
+
+    .fondo-como-funciona {
+
+        max-width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .p-cont {
+        margin: 0;
+        padding: 0;
+    }
+
+
+}
+
+
+
+
+
+/*----Ventas sobre el alquiler tradicional-CONTACTO----*/
+
+.fondo-cont {
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-image: url(../imagenes/terraza-anochecer.png);
+    height: 100vh;
+    max-width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.lista-contenedor {
+
+    margin: 0 5% 5% 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 100%;
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* negro con 50% de transparencia */
+    padding: 4rem;
+    border-radius: 2rem;
+}
+
+.lista-contenedor h2 {
+    font-size: 3rem;
+    margin: 2rem 0 2rem 0;
+}
+
+.lista-contenedor li {
+
+    font-size: 2rem;
+    text-align: left;
+    padding: 1rem;
+    color: rgb(252, 218, 0);
+
+}
+
+.lista-contenedor li::marker {
+    color: rgb(252, 218, 0);
+    font-size: 1.5em;
+}
+
+.whatsapp {
+
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 5% 5% 5%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* negro con 50% de transparencia */
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.whatsapp img {
+
+    max-width: 100px;
+    border-radius: 50px;
+    margin-left: 40%;
+
+}
+
+.whatsapp h2,
+h3 {
+
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0 0 2rem 0;
+}
+
+.whatsapp p {
+
+    color: white;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.span-p {
+
+    color: rgb(252, 218, 0);
+
+}
+
+/* Media queries para pantallas pequeñas */
+
+@media (max-width: 768px) {
+
+    .fondo-cont {
+
+        max-width: 100%;
+        height: 140vh;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .lista-contenedor {
+
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0;
+
+    }
+
+    .lista-contenedor h2 {
+
+        font-size: 2.5rem;
+        padding: 10px;
+        margin: 1rem 0 2rem 0;
+    }
+
+    .lista-contenedor li {
+
+        font-size: 1.5rem;
+        margin: 0 0 0 10%;
+        padding: 2px;
+    }
+
+    .whatsapp {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0;
+    }
+
+    .whatsapp img {
+
+        max-width: 100px;
+        margin: auto;
+    }
+
+    .whatsapp h2 {
+
+        font-size: 3rem;
+        margin: 0 0 1.5rem 0;
+        padding: 0;
+    }
+
+    .whatsapp h3 {
+
+        font-size: 2rem;
+        padding: 0;
+        margin: 0 0 1.5rem 0;
+    }
+
+    .whatsapp p {
+
+        font-size: 1.3rem;
+        margin: 0 0 1.5rem 0;
+        padding: 0;
+
+    }
+
+}
+
+/*----galería de imágenes---*/
+
+.contenedor-galeria {
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.contenedor-galeria img {
+
+    max-width: 600px;
+    padding: 20px;
+    transition: transform 0.6s ease;
+}
+
+.contenedor-galeria img:hover {
+
+    transform: scale(1.2);
+}
+
+.h2-galeria {
+
+    margin: 6rem 0 6rem 6rem;
+    width: fit-content;
+    font-size: 3.5rem;
+}
+
+/* Media queries para pantallas pequeñas */
+
+@media (max-width:768px) {
+
+    .contenedor-galeria {
+
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contenedor-galeria img {
+
+        max-width: 100%;
+    }
+
+    .h2-galeria {
+
+        margin: 0;
+        padding: 5px;
+        font-size: 2.6rem;
+    }
+
+    .contenedor-galeria :hover {
+
+        transform: scale(1.0);
+    }
+
+}
+
+/*------FOOTER-----*/
+
+.cont-footer {
+
+    background-image: url(../imagenes/terraza-anochecer.png);
+    background-position: top;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-top: 5%;
+}
+
+.cont-footer img {
+
+    max-width: 100px;
+    margin-left: 15%;
+}
+
+.cont-footer p {
+    color: rgb(252, 218, 0);
+
+}
+
+.cont-footer i {
+
+    color: rgb(252, 218, 0);
+    text-align: center;
+    margin-right: 8%;
+
+}
+
+.cont-footer a {
+
+    text-decoration: none;
+    color: white;
+}
+
+/* Media queries para pantallas pequeñas */
+
+@media (max-width: 768px) {
+
+    .cont-footer {
+        display: flex;
+        background-position: top;
+        width: 100%;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+        height: auto;
+
+
+    }
+
+    .cont-footer img {
+        margin: 0;
+        padding: 0;
+        max-width: 100px;
+    }
+
+    .cont-footer p {
+
+        margin-bottom: 10px;
+    }
+
+    .cont-footer i {
+        font-size: 0.9rem;
+    }
+
+
+
+}

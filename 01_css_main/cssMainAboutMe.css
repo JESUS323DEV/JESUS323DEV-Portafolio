@@ -1,0 +1,30 @@
+.spanText {
+
+    color: rgb(247, 216, 14);
+}
+
+.spanCorchete {
+
+    color: yellow;
+}
+
+.spanText2 {
+
+    color: rgb(0, 234, 255);
+}
+
+.spanText3 {
+
+    color: rgb(255, 209, 149);
+}
+
+#sectionAboutMe p {
+
+    margin-left: 1.5rem;
+}
+
+.contAboutMe {
+
+    margin-top: 3.6rem;
+}
+
