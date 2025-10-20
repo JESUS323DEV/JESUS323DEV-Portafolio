@@ -28,3 +28,38 @@
     margin-top: 3.6rem;
 }
 
+.styleHover p:hover {
+
+    background-color: rgb(50, 50, 50);
+}
+
+.bg-Notes1 {
+    background-color: rgb(55, 66, 195);
+    width: 20%;
+
+
+}
+
+.bg-Notes2 {
+
+    background-color: rgb(55, 66, 195);
+    width: 25%;
+}
+
+.bg-Notes3 {
+
+    background-color: rgb(55, 66, 195);
+    width: 42%;
+}
+
+.bg-Notes4 {
+
+    background-color: rgb(55, 66, 195);
+    width: 34%;
+}
+
+.bg-Notes5 {
+
+    background-color: rgb(55, 66, 195);
+    width: 36%;
+}

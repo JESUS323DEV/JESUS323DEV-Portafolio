@@ -143,6 +143,7 @@ body {
 .mainInicio {
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.7);
     min-height: 100vh;
+    
 }
 
 .mainInicio section {
@@ -150,14 +151,29 @@ body {
 }
 
 /* 🧱 TITULOS INICIO */
+
+.sectionInicioH2 {
+
+    display: flex;
+    justify-content:start;
+    gap: 1.8rem;
+    align-items: center;
+}
+
+
+
 .sectionInicioH2 h2 {
-    margin-top: 1%;
     color: rgb(255, 255, 255);
     font-size: 3rem;
 }
 
+.sectionInicioH2 img {
+    width: 150px;
+    border-radius: 50% ;
+}
+
+
 .sectionInicioH2 p {
-    color: rgb(3, 79, 255);
     font-size: 5rem;
     font-weight: bold;
 }
