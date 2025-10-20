@@ -1,17 +1,21 @@
+/* ─────────────────────────────── */
 /* 🎨 RESET GENERAL */
+/* ─────────────────────────────── */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ─────────────────────────────── */
 /* 🌑 BASE GLOBAL */
+/* ─────────────────────────────── */
 html,
 body {
-    background-color: #1E1E1E;
+    background-color: #1e1e1e;
     color: white;
-    padding: 0;
-    margin: 0;
+    padding: 0 !important;
+    margin: 0 !important;
     font-family: "Source Code Pro", monospace;
     font-style: normal;
 }
@@ -23,11 +27,18 @@ body {
 }
 
 /* ─────────────────────────────── */
+/* 🏗️ MAIN */
+/* ─────────────────────────────── */
+main {
+    padding-top: 9.3rem;
+}
+
+/* ─────────────────────────────── */
 /* 🧭 NAVBAR */
 /* ─────────────────────────────── */
-
 .navbar {
-    background-color: #1E1E1E;
+    background-color: #1e1e1e;
+    border: 1px solid rgb(33, 33, 33);
 }
 
 /* 🧩 LOGO */
@@ -109,14 +120,11 @@ body {
 /* ─────────────────────────────── */
 /* 📂 BARRA LATERAL */
 /* ─────────────────────────────── */
-
 .barraLateral {
     min-height: 100vh;
     background-color: #181818;
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.7);
     border: 1px solid rgb(37, 37, 37);
-
-    padding: 20px;
 }
 
 .barraLateral summary::-webkit-details-marker {
@@ -124,12 +132,23 @@ body {
 }
 
 .barraLateral summary {
-
     padding: 6px;
     list-style: none;
-
 }
 
+.estructura {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+}
+
+.fixedBarras {
+    position: fixed;
+    left: 10.3rem;
+    top: 9.2rem;
+    border-collapse: collapse;
+    border: 1px solid rgb(34, 34, 34);
+}
 
 /* 💡 FOCUS EN SUMMARY (VSCode style) */
 .barraLateral summary:focus {
@@ -139,28 +158,20 @@ body {
 /* ─────────────────────────────── */
 /* 🏠 SECCIÓN INICIO */
 /* ─────────────────────────────── */
-
 .mainInicio {
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.7);
+    border-collapse: collapse;
     min-height: 100vh;
-    
+    margin-left: 19rem;
 }
 
-.mainInicio section {
-    max-width: 100%;
-}
-
-/* 🧱 TITULOS INICIO */
-
+/* 🧱 TÍTULOS INICIO */
 .sectionInicioH2 {
-
     display: flex;
-    justify-content:start;
+    justify-content: start;
     gap: 1.8rem;
     align-items: center;
 }
-
-
 
 .sectionInicioH2 h2 {
     color: rgb(255, 255, 255);
@@ -169,9 +180,8 @@ body {
 
 .sectionInicioH2 img {
     width: 150px;
-    border-radius: 50% ;
+    border-radius: 50%;
 }
-
 
 .sectionInicioH2 p {
     font-size: 5rem;
@@ -193,21 +203,29 @@ body {
     font-size: 12px;
 }
 
-/* 🌈 COLOR EXTRA (por clase personalizada) */
+/* 🌈 COLOR EXTRA */
 .colorP {
     color: rgb(0, 252, 0) !important;
 }
 
 /* 📏 BARRA NÚMEROS DE LÍNEAS */
 .barraNumLineas {
-    margin: 0;
+    margin: 0 !important;
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.7);
     border: 1px solid rgb(37, 37, 37);
     border-collapse: collapse;
 }
 
+.barraNumLineas p {
+    margin: 0 !important;
+    border-collapse: collapse;
+    padding-left: 5px;
+    padding-right: 5px;
+}
 
-
+/* ─────────────────────────────── */
+/* 🧩 ELEMENTOS INTERACTIVOS */
+/* ─────────────────────────────── */
 .icono {
     display: inline-block;
     transition: transform 0.3s ease;
@@ -217,6 +235,9 @@ body {
     transform: rotate(90deg);
 }
 
+/* ─────────────────────────────── */
+/* 🧩 BARRA EXTENSIONES */
+/* ─────────────────────────────── */
 .barraExtensiones {
     display: flex;
     flex-direction: column;
@@ -227,18 +248,14 @@ body {
 }
 
 .barraExtensiones i {
-
     font-size: 1.9rem;
     color: rgb(190, 190, 190);
     padding: 8px;
 }
 
-
-
 .barraExtensiones button {
     background-color: #181818;
     border: none !important;
-
 }
 
 .barraExtensiones button.activo,
@@ -248,38 +265,336 @@ body {
     width: 100%;
 }
 
-
+/* ─────────────────────────────── */
+/* 🧭 GITHUB / CONTACTO */
+/* ─────────────────────────────── */
 .gitHome {
     display: flex;
     gap: 30px;
 }
 
 .gitHome p {
-
     margin-top: 15px;
 }
 
 .gitHome a {
-
     color: rgb(255, 238, 2);
     text-decoration: none;
 }
 
-
-
-
-
 .gitHome img {
-
     width: 60px;
+}
+
+.gitHome i {
+    margin-left: 80%;
+    margin-right: 0;
+}
+
+
+
+
+/* ─────────────────────────────── */
+/* 📱 MEDIA QUERIES RESPONSIVE */
+/* ─────────────────────────────── */
+
+/* Móviles XS (≤575px) */
+@media (max-width: 575px) {
+
+
+    /**Inicio**/
+    /* 🧱 Indicador visual (solo para debug) */
+    body::before {
+        content: "≤575px XS";
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgb(185, 6, 6);
+        color: rgb(0, 0, 0);
+        padding: 5px;
+        z-index: 9999;
+    }
+
+
+
+
+    /* 🏠 Sección principal */
+    .mainInicio {
+        min-height: 100vh;
+        margin-left: 0;
+    }
+
+    /* 📂 Barras laterales */
+    .fixedBarras {
+        position: static;
+        left: auto;
+        top: auto;
+    }
+
+    /* 🔗 Menú navegación */
+    .ulStyle ul {
+        margin-left: 0 !important;
+    }
+
+    /* 📏 Barra de números de líneas */
+    .barraNumLineas {
+        margin: 0 !important;
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.7);
+        border: 1px solid rgb(37, 37, 37);
+        border-collapse: collapse;
+    }
+
+    .barraNumLineas p {
+        margin: 0 !important;
+        border-collapse: collapse;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    /* 🧱 Encabezados inicio */
+    .sectionInicioH2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sectionInicioH2 h2 {
+        font-size: 2rem;
+    }
+
+    .sectionInicioH2 p {
+        font-size: 4rem;
+    }
+
+
+    main {
+
+        padding-top: 14.5rem !important;
+    }
+
+    /**============Sobre mi================**/
+
+    #sectionAboutMe p {
+
+        margin-left: 0 !important;
+    }
+
+
+    .animationSmall {
+
+        font-size: 12px !important;
+    }
+
+    .styleHover p {
+        font-size: 1.3rem;
+
+    }
+
+    .bg-Notes1 {
+        width: 55% !important;
+        font-size: 13px;
+
+    }
+
+    .bg-Notes2 {
+
+        width: 65% !important;
+        font-size: 13px;
+
+    }
+
+    .bg-Notes3 {
+
+        width: 100% !important;
+        font-size: 13px;
+
+    }
+
+    .bg-Notes4 {
+
+        width: 80% !important;
+        font-size: 13px;
+
+    }
+
+    .bg-Notes5 {
+
+        width: 86% !important;
+        font-size: 13px;
+
+    }
+
+    /**============Proyectos================**/
+    .proyectosText p {
+
+        margin-left: 0 !important;
+    }
+
+    .proyectosText h2 {
+
+        margin-left: 0 !important;
+        font-size: 1px !important;
+    }
+
+
+
+    .proyectosText small {
+        font-size: 0.9rem;
+    }
+
+    .textAtencia h3 {
+
+        margin-left: 0 !important;
+    }
+
+    .mobileStyle h2 {
+
+        font-size: 19px !important;
+    }
+
+
+    .mobileStyle small {
+        font-size: 12px !important;
+
+    }
+
+    .mobileStyle2 {
+        width: 83% !important;
+    }
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    .fondoAtencia:hover {
+
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .atenciaTarjeta,
+    .gameLabTarjeta,
+    .formLabTarjeta {
+        border: 1px solid rgb(55, 55, 55);
+        background: linear-gradient(to top, rgba(39, 39, 39, 0), #1E1E1E);
+        box-shadow: none !important;
+
+    }
+
+
+    .textAtencia p, .textGameLab p, .textFormLab p {
+
+        padding: 0 !important;
+    }
 
 
 }
 
-.gitHome i {
-
-    margin-left: 80%;
-    margin-right: 0;
 
 
+
+
+
+
+
+
+
+
+/* Móviles verticales SM (576px – 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    body::before {
+        content: "576px-767px SM";
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgb(0, 255, 30);
+        color: rgb(0, 0, 0);
+        padding: 5px;
+        z-index: 9999;
+
+    }
+
+
+}
+
+/* Tablets verticales MD (768px – 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    body::before {
+        content: "768px-991px MD";
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgb(1, 22, 255);
+        color: rgb(0, 0, 0);
+        padding: 5px;
+        z-index: 9999;
+
+    }
+}
+
+/* iPad Pro Vertical (Portrait) */
+@media (min-width: 834px) and (max-width: 1024px) {}
+
+/* Tablets horizontales / laptops pequeñas LG (992px – 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    body::before {
+        content: "992px-1199px LG";
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgb(196, 1, 255);
+        color: rgb(0, 0, 0);
+        padding: 5px;
+        z-index: 9999;
+
+    }
+}
+
+
+/*NEST HUB NORMAL YS I (1200px – 1279px) */
+@media (min-width: 1200px) and (max-width: 1279px) {
+    body::before {
+        content: "1200px-1279px";
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+        padding: 5px;
+        z-index: 9999;
+
+    }
+}
+
+/* iPad Pro Horizontal (Landscape) */
+@media (min-width: 1025px) and (max-width: 1366px) {}
+
+/* NEST HUB MAX Y SIMILARES (1280px – 1399px) */
+@media (min-width: 1280px) and (max-width: 1399px) {
+
+    body::before {
+        content: "1200px-1279px";
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgb(255, 102, 0);
+        color: rgb(255, 255, 255);
+        padding: 5px;
+        z-index: 9999;
+    }
+}
+
+/* Pantallas grandes XXL ≥1400px */
+@media (min-width: 1400px) {
+    body::before {
+        content: "1200px-1279px";
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgb(135, 181, 255);
+        color: rgb(255, 255, 255);
+        padding: 5px;
+        z-index: 9999;
+    }
 }
