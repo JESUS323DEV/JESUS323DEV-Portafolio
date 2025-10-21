@@ -24,7 +24,7 @@ body {
 footer {
     padding-left: 10.3rem !important;
     /* o el ancho exacto de tu .barraLateral */
-    background:  #1e1e1e;
+    background: #1e1e1e;
     border: 1px solid rgb(95, 94, 94);
     color: #ffffff;
     z-index: 10;
@@ -351,9 +351,6 @@ li {
     margin-right: 0;
 }
 
-
-
-
 /* ─────────────────────────────── */
 /* 📱 MEDIA QUERIES RESPONSIVE */
 /* ─────────────────────────────── */
@@ -529,10 +526,12 @@ li {
 
     .atenciaTarjeta,
     .gameLabTarjeta,
-    .formLabTarjeta {
+    .formLabTarjeta,
+    .webChuletasTarjeta {
         border: 1px solid rgb(31, 31, 31);
         background: linear-gradient(to top, rgba(39, 39, 39, 0), #1E1E1E);
         box-shadow: none !important;
+        margin: 9px;
     }
 
     .textMobil {
@@ -544,24 +543,67 @@ li {
     }
 
 
+    .textMobil {
+
+        color: rgb(21, 255, 0);
+        font-size: 0.5rem;
+        text-align: center;
+        padding: 0.5rem;
+        margin-bottom: 3rem;
+        width: 83%;
+    }
+
+    .enlaceGit2,
+    .enlaceGit2 * {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+
+
 
 
     .textAtencia p,
     .textGameLab p,
     .textFormLab p,
-    .textAtencia h3,
-    .textFormLab h3,
-    .textGameLab h3 {
+    .textWebChuletas p {
 
         padding: 0 !important;
-        margin: 0 !important;
     }
 
+    footer {
+
+        background: #1e1e1e;
+        border: 1px solid rgb(95, 94, 94);
+        color: #ffffff;
+        width: 95% !important;
+        margin: auto;
+    }
+
+    footer img {
+
+        width: 50px;
+    }
+
+    footer h5 {
+
+        font-size: 10px;
+    }
+
+    .mobileFooter {
+        display: flex;
+        flex-direction: column !important;
+        margin-inline-start: -155px;
+        gap: 0 !important;
+        border: none !important;
+
+
+    }
+
+
+
+
 }
-
-
-
-
 
 /* Móviles verticales SM (576px – 767px) */
 @media (min-width: 576px) and (max-width: 767px) {
@@ -574,11 +616,246 @@ li {
         color: rgb(0, 0, 0);
         padding: 5px;
         z-index: 9999;
+    }
+
+
+
+    /* 🏠 Sección principal */
+    .mainInicio {
+        min-height: 100vh;
+        margin-left: 0;
+    }
+
+    /* 📂 Barras laterales */
+    .fixedBarras {
+        position: static;
+        left: auto;
+        top: auto;
+    }
+
+    /* 🔗 Menú navegación */
+    .ulStyle ul {
+        margin-left: 0 !important;
+    }
+
+    /* 📏 Barra de números de líneas */
+    .barraNumLineas {
+        margin: 0 !important;
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.7);
+        border: 1px solid rgb(37, 37, 37);
+        border-collapse: collapse;
+    }
+
+    .barraNumLineas p {
+        margin: 0 !important;
+        border-collapse: collapse;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    /* 🧱 Encabezados inicio */
+    .sectionInicioH2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sectionInicioH2 h2 {
+        font-size: 2rem;
+    }
+
+    .sectionInicioH2 p {
+        font-size: 4rem;
+    }
+
+
+    main {
+
+        padding-top: 14.5rem !important;
+    }
+
+    /**============Sobre mi================**/
+
+    #sectionAboutMe p {
+
+        margin-left: 0 !important;
+    }
+
+
+    .animationSmall {
+
+        font-size: 12px !important;
+    }
+
+    .styleHover p {
+        font-size: 1.3rem;
+
+    }
+
+    .bg-Notes1 {
+        width: 55% !important;
+        font-size: 13px;
+
+    }
+
+    .bg-Notes2 {
+
+        width: 65% !important;
+        font-size: 13px;
+
+    }
+
+    .bg-Notes3 {
+
+        width: 100% !important;
+        font-size: 13px;
+
+    }
+
+    .bg-Notes4 {
+
+        width: 80% !important;
+        font-size: 13px;
+
+    }
+
+    .bg-Notes5 {
+
+        width: 86% !important;
+        font-size: 13px;
+
+    }
+
+    /**============Proyectos================**/
+    .proyectosText p,
+    .proyectosText h2 {
+
+        margin-left: 0 !important;
+    }
+
+
+    .proyectosText small {
+        font-size: 0.9rem;
+    }
+
+
+
+    .mobileStyle h2 {
+
+        font-size: 19px !important;
+    }
+
+
+    .mobileStyle small {
+        font-size: 12px !important;
+
+    }
+
+    .mobileStyle {
+        width: 90% !important;
+    }
+
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+
+    .fondoAtencia:hover,
+    .fondoGameLab:hover,
+    .fondoFormLab:hover {
+
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .atenciaTarjeta,
+    .gameLabTarjeta,
+    .formLabTarjeta,
+    .webChuletasTarjeta {
+        border: 1px solid rgb(31, 31, 31);
+        background: linear-gradient(to top, rgba(39, 39, 39, 0), #1E1E1E);
+        box-shadow: none !important;
+        margin: auto;
+    }
+
+    .textMobil {
+
+        color: rgb(0, 165, 0);
+        font-size: 2rem;
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+
+    .textMobil {
+
+        color: rgb(21, 255, 0);
+        font-size: 0.5rem;
+        text-align: center;
+        padding: 0.5rem;
+        margin-bottom: 3rem;
+        width: 83%;
+    }
+
+    .enlaceGit2,
+    .enlaceGit2 * {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+
+
+
+
+    .textAtencia p,
+    .textGameLab p,
+    .textFormLab p,
+    .textWebChuletas p {
+
+        padding: 0 !important;
+    }
+
+    footer {
+
+        background: #1e1e1e;
+        border: 1px solid rgb(95, 94, 94);
+        color: #ffffff;
+        width: 95% !important;
+        margin: auto;
+    }
+
+    footer img {
+
+        width: 50px;
+    }
+
+    footer h5 {
+
+        font-size: 10px;
+    }
+
+    .mobileFooter {
+        display: flex;
+        flex-direction: column !important;
+        margin-inline-start: -155px;
+        gap: 0 !important;
+        border: none !important;
+
 
     }
 
 
+
 }
+
+
+
+
+
+
+
+
 
 /* Tablets verticales MD (768px – 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
@@ -593,6 +870,236 @@ li {
         z-index: 9999;
 
     }
+
+
+
+    /* 🏠 Sección principal */
+    .mainInicio {
+        min-height: 100vh;
+        margin-left: 0;
+    }
+
+    /* 📂 Barras laterales */
+    .fixedBarras {
+        position: static;
+        left: auto;
+        top: auto;
+    }
+
+    /* 🔗 Menú navegación */
+    .ulStyle ul {
+        margin-left: 0 !important;
+    }
+
+    /* 📏 Barra de números de líneas */
+    .barraNumLineas {
+        margin: 0 !important;
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.7);
+        border: 1px solid rgb(37, 37, 37);
+        border-collapse: collapse;
+    }
+
+    .barraNumLineas p {
+        margin: 0 !important;
+        border-collapse: collapse;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    /* 🧱 Encabezados inicio */
+    .sectionInicioH2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sectionInicioH2 h2 {
+        font-size: 2rem;
+    }
+
+    .sectionInicioH2 p {
+        font-size: 4rem;
+    }
+
+
+    main {
+
+        padding-top: 14.5rem !important;
+    }
+
+    /**============Sobre mi================**/
+
+    #sectionAboutMe p {
+
+        margin-left: 0 !important;
+    }
+
+
+    .animationSmall {
+
+        font-size: 12px !important;
+    }
+
+    .styleHover p {
+        font-size: 1.3rem;
+
+    }
+
+    .bg-Notes1 {
+        width: 55% !important;
+        font-size: 13px;
+
+    }
+
+    .bg-Notes2 {
+
+        width: 65% !important;
+        font-size: 13px;
+
+    }
+
+    .bg-Notes3 {
+
+        width: 100% !important;
+        font-size: 13px;
+
+    }
+
+    .bg-Notes4 {
+
+        width: 80% !important;
+        font-size: 13px;
+
+    }
+
+    .bg-Notes5 {
+
+        width: 86% !important;
+        font-size: 13px;
+
+    }
+
+    /**============Proyectos================**/
+    .proyectosText p,
+    .proyectosText h2 {
+
+        margin-left: 0 !important;
+    }
+
+
+    .proyectosText small {
+        font-size: 0.9rem;
+    }
+
+
+
+    .mobileStyle h2 {
+
+        font-size: 19px !important;
+    }
+
+
+    .mobileStyle small {
+        font-size: 12px !important;
+
+    }
+
+    .mobileStyle {
+        width: 90% !important;
+    }
+
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+
+    .fondoAtencia:hover,
+    .fondoGameLab:hover,
+    .fondoFormLab:hover {
+
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .atenciaTarjeta,
+    .gameLabTarjeta,
+    .formLabTarjeta,
+    .webChuletasTarjeta {
+        border: 1px solid rgb(31, 31, 31);
+        background: linear-gradient(to top, rgba(39, 39, 39, 0), #1E1E1E);
+        box-shadow: none !important;
+
+    }
+
+
+
+    .textMobil {
+
+        color: rgb(0, 165, 0);
+        font-size: 2rem;
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+
+    .textMobil {
+
+        color: rgb(21, 255, 0);
+        font-size: 0.5rem;
+        text-align: center;
+        padding: 0.5rem;
+        margin-bottom: 3rem;
+        width: 83%;
+    }
+
+    .enlaceGit2,
+    .enlaceGit2 * {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+
+
+
+
+    .textAtencia p,
+    .textGameLab p,
+    .textFormLab p,
+    .textWebChuletas p {
+
+        padding: 0 !important;
+    }
+
+    footer {
+
+        background: #1e1e1e;
+        border: 1px solid rgb(95, 94, 94);
+        color: #ffffff;
+        width: 95% !important;
+        margin: auto;
+    }
+
+    footer img {
+
+        width: 50px;
+    }
+
+    footer h5 {
+
+        font-size: 10px;
+    }
+
+    .mobileFooter {
+        display: flex;
+        flex-direction: column !important;
+        margin-inline-start: -155px;
+        gap: 0 !important;
+        border: none !important;
+
+
+    }
+
 }
 
 /* iPad Pro Vertical (Portrait) */
