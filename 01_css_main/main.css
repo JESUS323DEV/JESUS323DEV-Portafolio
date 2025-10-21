@@ -20,6 +20,21 @@ body {
     font-style: normal;
 }
 
+
+footer {
+    padding-left: 10.3rem !important;
+    /* o el ancho exacto de tu .barraLateral */
+    background:  #1e1e1e;
+    border: 1px solid rgb(95, 94, 94);
+    color: #ffffff;
+    z-index: 10;
+}
+
+footer img {
+
+    width: 80px;
+}
+
 /* 🔧 FIX BOOTSTRAP SCROLL (evita margen negativo en .row) */
 .row {
     margin-right: 0;
@@ -132,13 +147,12 @@ main {
 }
 
 .barraLateral summary {
-    padding: 6px;
+    padding: 3px;
     list-style: none;
 }
 
 .estructura {
     width: 100%;
-    padding: 10px;
     margin-top: 8px;
 }
 
@@ -152,6 +166,45 @@ main {
 
 /* 💡 FOCUS EN SUMMARY (VSCode style) */
 .barraLateral summary:focus {
+    background-color: #383838;
+}
+
+
+/**LISTA LINKS ATENCIAHOMES**/
+.lista-versiones a {
+    color: white;
+    text-decoration: none;
+}
+
+.portafolio {
+
+    color: white;
+    text-decoration: none;
+    padding: 3px;
+}
+
+.portafolio:hover {
+
+    background-color: #383838;
+
+}
+
+.styleBarraLateral {
+
+    margin-left: 10px;
+
+}
+
+
+.lista-versiones ul,
+li {
+    list-style: none;
+    padding-left: 0;
+    padding-bottom: 0 !important;
+}
+
+.lista-versiones li:hover {
+
     background-color: #383838;
 }
 
@@ -219,6 +272,7 @@ main {
 .barraNumLineas p {
     margin: 0 !important;
     border-collapse: collapse;
+    margin-left: 15px !important;
     padding-left: 5px;
     padding-right: 5px;
 }
@@ -265,8 +319,14 @@ main {
     width: 100%;
 }
 
+
+
+
+
+
+
 /* ─────────────────────────────── */
-/* 🧭 GITHUB / CONTACTO */
+/* 🧭 GitHub / CONTACTO */
 /* ─────────────────────────────── */
 .gitHome {
     display: flex;
@@ -482,7 +542,7 @@ main {
         text-align: center;
         padding: 0.5rem;
     }
-    
+
 
 
 
