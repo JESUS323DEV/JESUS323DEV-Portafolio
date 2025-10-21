@@ -20,7 +20,6 @@ body {
     font-style: normal;
 }
 
-
 footer {
     padding-left: 10.3rem !important;
     /* o el ancho exacto de tu .barraLateral */
@@ -208,6 +207,7 @@ li {
     background-color: #383838;
 }
 
+
 /* ─────────────────────────────── */
 /* 🏠 SECCIÓN INICIO */
 /* ─────────────────────────────── */
@@ -324,7 +324,6 @@ li {
 
 
 
-
 /* ─────────────────────────────── */
 /* 🧭 GitHub / CONTACTO */
 /* ─────────────────────────────── */
@@ -351,6 +350,24 @@ li {
     margin-right: 0;
 }
 
+
+@media (max-width: 767px) {
+
+    .atenciaTarjeta,
+    .gameLabTarjeta,
+    .formLabTarjeta,
+    .webChuletasTarjeta {
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        float: none !important;
+        width: 90% !important;
+        max-width: 400px !important;
+    }
+}
+
+
+
 /* ─────────────────────────────── */
 /* 📱 MEDIA QUERIES RESPONSIVE */
 /* ─────────────────────────────── */
@@ -371,6 +388,7 @@ li {
         padding: 5px;
         z-index: 9999;
     }
+
 
 
 
@@ -509,10 +527,25 @@ li {
         width: 90% !important;
     }
 
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .atenciaTarjeta,
+    .gameLabTarjeta,
+    .formLabTarjeta,
+    .webChuletasTarjeta {
+        width: 90%;
+        max-width: 350px;
+    }
+
 
     html,
     body {
         overflow-x: hidden;
+
     }
 
 
@@ -528,11 +561,14 @@ li {
     .gameLabTarjeta,
     .formLabTarjeta,
     .webChuletasTarjeta {
+
         border: 1px solid rgb(31, 31, 31);
         background: linear-gradient(to top, rgba(39, 39, 39, 0), #1E1E1E);
         box-shadow: none !important;
-        margin: 9px;
+
     }
+
+
 
     .textMobil {
 
