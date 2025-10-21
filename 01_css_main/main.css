@@ -424,27 +424,18 @@ main {
     }
 
     /**============Proyectos================**/
-    .proyectosText p {
-
-        margin-left: 0 !important;
-    }
-
+    .proyectosText p,
     .proyectosText h2 {
 
         margin-left: 0 !important;
-        font-size: 1px !important;
     }
-
 
 
     .proyectosText small {
         font-size: 0.9rem;
     }
 
-    .textAtencia h3 {
 
-        margin-left: 0 !important;
-    }
 
     .mobileStyle h2 {
 
@@ -457,16 +448,20 @@ main {
 
     }
 
-    .mobileStyle2 {
-        width: 83% !important;
+    .mobileStyle {
+        width: 90% !important;
     }
+
 
     html,
     body {
         overflow-x: hidden;
     }
 
-    .fondoAtencia:hover {
+
+    .fondoAtencia:hover,
+    .fondoGameLab:hover,
+    .fondoFormLab:hover {
 
         transform: none !important;
         transition: none !important;
@@ -475,26 +470,34 @@ main {
     .atenciaTarjeta,
     .gameLabTarjeta,
     .formLabTarjeta {
-        border: 1px solid rgb(55, 55, 55);
+        border: 1px solid rgb(31, 31, 31);
         background: linear-gradient(to top, rgba(39, 39, 39, 0), #1E1E1E);
         box-shadow: none !important;
-
     }
 
+    .textMobil {
 
-    .textAtencia p, .textGameLab p, .textFormLab p {
+        color: rgb(0, 165, 0);
+        font-size: 2rem;
+        text-align: center;
+        padding: 0.5rem;
+    }
+    
+
+
+
+    .textAtencia p,
+    .textGameLab p,
+    .textFormLab p,
+    .textAtencia h3,
+    .textFormLab h3,
+    .textGameLab h3 {
 
         padding: 0 !important;
+        margin: 0 !important;
     }
 
-
 }
-
-
-
-
-
-
 
 
 

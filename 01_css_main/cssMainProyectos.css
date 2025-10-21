@@ -13,6 +13,16 @@
     font-size: 0.9rem;
 }
 
+
+.textMobil {
+
+    color: rgb(0, 165, 0);
+    font-size: 2rem;
+    text-align: center;
+    padding: 0.5rem;
+    margin-bottom: 3rem;
+}
+
 .small1 {
 
     color: rgb(37, 84, 255);
@@ -52,6 +62,31 @@
 
     color: rgb(50, 241, 255);
 }
+
+.enlaceWeb {
+
+    color: rgb(187, 251, 245);
+    font-size: 1.5rem;
+    cursor: default;
+}
+
+.enlaceGit {
+
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    cursor: default;
+}
+
+
+.enlaceGit2 {
+
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    cursor: default;
+    margin-top: 2.6rem;
+
+}
+
 
 /* !=========================Tarjetas Proyectos ============================================*/
 
@@ -96,27 +131,35 @@
 
 
 .atenciaTarjeta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     border: 1px solid rgb(55, 55, 55);
     background: linear-gradient(to top, rgba(39, 39, 39, 0), #1E1E1E);
     box-shadow: 10px 10px 10px rgb(46, 46, 46);
-
 }
 
 
+
+
+
 .textAtencia {
-    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: auto;
 }
 
 .textAtencia p {
 
-    padding: 20px;
+    padding: 0.3rem;
+    text-align: start;
 }
 
 .textAtencia h3 {
-
-    margin-left: 20px;
-
-
+    color: rgb(18, 231, 255);
+    font-weight: bold;
+    text-align: start;
+    margin-top: 0.5rem;
 }
 
 /* !=====tarjeta game lab====*/
@@ -167,14 +210,17 @@
 
 .textGameLab p {
 
-    padding: 20px;
+    padding: 0.3rem;
+    text-align: start;
+
 }
 
 .textGameLab h3 {
 
-    margin-left: 20px;
-
-
+    color: rgb(37, 84, 255);
+    font-weight: bold;
+    text-align: start;
+    margin-top: 0.5rem;
 }
 
 
@@ -192,7 +238,7 @@
 .fondoFormLab {
 
     position: relative;
-    background-image: url(../03_media_main/img/proyectos/bg-formlab.png);
+    background-image: url(../03_media_main/img/proyectos/bg-formLab.png);
     background-position: center;
     background-size: cover;
     width: 21rem;
@@ -227,15 +273,76 @@
 
 .textFormLab p {
 
-    padding: 20px;
+    padding: 0.3rem;
+    text-align: start;
 }
 
 .textFormLab h3 {
 
-    margin-left: 20px;
+    color: rgb(255, 179, 3);
+    font-weight: bold;
+    text-align: start;
+    margin-top: 0.5rem;
 
 
 }
 
+/* !=====tarjeta webChuletas====*/
+
+.webChuletasTarjeta {
+    border: 1px solid rgb(55, 55, 55);
+    background: linear-gradient(to top, rgba(39, 39, 39, 0), #1E1E1E);
+    box-shadow: 10px 10px 10px rgb(46, 46, 46);
 
 
+}
+
+.fondoWebChuletas {
+
+    position: relative;
+    background-image: url(../03_media_main/img/proyectos/bg-webchuletas.png);
+    background-position: center;
+    background-size: cover;
+    width: 21rem;
+    height: 11rem;
+    margin: auto;
+    margin-top: 6px;
+    border-radius: 5%;
+
+}
+
+.fondoWebChuletas:hover {
+
+    transform: scale(1.06);
+    transition: 0.4s ease-in-out;
+}
+
+.fondoWebChuletas::before {
+
+    position: absolute;
+    content: "";
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #1E1E1E, rgba(255, 255, 255, 0.36), rgba(255, 255, 255, 0));
+    z-index: 1;
+}
+
+
+.textWebChuletas {
+    color: rgb(255, 255, 255);
+}
+
+.textWebChuletas p {
+
+    padding: 0.3rem;
+    text-align: start;
+}
+
+.textWebChuletas h3 {
+    color: rgb(252, 193, 111);
+    font-weight: bold;
+    text-align: start;
+    margin-top: 0.5rem;
+
+}

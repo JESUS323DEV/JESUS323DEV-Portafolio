@@ -52,8 +52,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link px-4" id="linkAboutme" role="button" href="#"
-                                    aria-controls="sectionAboutme" aria-expanded="false">
+                                <a class="nav-link px-4" id="linkAboutme" role="button" href="#">
                                     <i class="bi bi-hash styleIconAbout" aria-hidden="true"></i>
                                     Sobre mi
                                 </a>
@@ -97,8 +96,10 @@
                         </div>
 
                         <!--!Estructura del proyecto barra lateral-->
-                        <section id="sectionEstructura" class="estructura">
+                        <div id="sectionEstructura" class="estructura">
                             <small>JESUS323DEV-PORTAFOLIO</small>
+
+
                             <!--!Atencia Homes-->
                             <div class="styleBarraLateral">
                                 <details>
@@ -106,38 +107,22 @@
                                     <!--!Atencia Homes V1-->
                                     <div>
                                         <details>
-                                            <summary><i class="bi bi-chevron-right icono"></i>AtenciaHomesV1</summary>
-
-
-                                            <p><a href="">index.html</a></p>
-
-                                        </details>
-                                    </div>
-                                    <!--!Atencia Homes V2-->
-                                    <div>
-                                        <details>
-                                            <summary><i class="bi bi-chevron-right icono"></i>AtenciaHomesV2</summary>
-                                            <p><a href="">index.html</a></p>
-                                        </details>
-                                    </div>
-
-                                    <!--!Atencia Homes V3-->
-                                    <div>
-                                        <details>
-                                            <summary><i class="bi bi-chevron-right icono"></i>AtenciaHomesV3</summary>
-                                            <p><a href="">index.html</a></p>
-                                        </details>
-                                    </div>
-
-                                    <!--!Atencia Homes V4-->
-                                    <div>
-                                        <details>
-                                            <summary><i class="bi bi-chevron-right icono"></i>AtenciaHomesV4</summary>
-                                            <p><a href="">AtenciaHomes.html</a></p>
+                                            <summary>
+                                                <a class="nav-link" href="">index.html</a>
+                                                <a class="nav-link" href="">index.html</a>
+                                                <a class="nav-link" href="">index.html</a>
+                                                <a class="nav-link" href="">index.html</a>
+                                                <a class="nav-link" href="">index.html</a>
+                                            </summary>
                                         </details>
                                     </div>
                                 </details>
                             </div>
+
+
+
+
+
 
 
                             <!--!FormLab-->
@@ -157,7 +142,7 @@
                                     <p><a href="">index.html</a></p>
                                 </details>
                             </div>
-                        </section>
+                        </div>
 
 
                         <!--!Sección barra lateral extensiones -->
@@ -190,7 +175,7 @@
                 <div class="col-lg-8 col-12  d-flex  mainInicio">
 
                     <!--!Barra de numero-->
-                    <div class="barraNumLineas ">
+                    <div class="barraNumLineas  d-none d-lg-block  ">
 
                         <p class="">1</p>
                         <p class=" ">2</p>
@@ -253,7 +238,7 @@
                                     <p class="mx-3 text-danger">&lt;Combinando
                                         código puro con plantillas cuando es
                                         necesario&gt;</p>
-                                    <small>&lt/div&gt</small>
+                                    <small>&lt;/div&gt;</small>
 
                                 </div>
 
@@ -293,9 +278,9 @@
                             <!--!Sobre mi -->
                             <div>
                                 <div class="styleHover">
-                                    <p class=" mb-5 text-success text-center">
+                                    <h5 class=" mb-5 text-success text-center">
                                         /* SOBRE MÍ 🧠 – VISUAL DEVELOPER EN PROGRESO */
-                                    </p>
+                                    </h5>
                                 </div>
 
                                 <p class="text-white bg-Notes1">/* SOBRE MÍ 🧐 */<span class="animationSmall">|</span>
@@ -399,11 +384,11 @@
 
                         <!--!Presentación-->
                         <div class="">
-                            <div class="proyectosText mt-2 mb-5">
+                            <div class="proyectosText mt-2 mb-5 d-none d-lg-block">
 
                                 <!--!Let-->
                                 <div class="mobileStyle ">
-                                    <div class="mt-1 mb-5">
+                                    <div class="mt-1 mb-5 ">
                                         <h2 class="colorLet"><small class="small1">const </small><span
                                                 class="colorConst text-bg-primary">Mi
                                                 mundo en código</span> <small>=
@@ -414,7 +399,7 @@
                                                     class="text-warning">)</span>;</small></h2>
 
                                         <!--!Const-->
-                                        <h2 class="p-5 p-lg-0"><small class="small1">let </small><span
+                                        <h2 class="p-2 p-lg-0"><small class="small1">let </small><span
                                                 class="colorLet text-bg-success">Aprender</span>
                                             <small>=</small> <span class="colorCustom">[</span>proyectos,
                                             experimentar, curiosidades, retos<span
@@ -450,15 +435,20 @@
 
                         </div>
 
+                        <!--!Presentación solo en móviles-->
+                        <div class="textMobil">
+                            <p>//Mis proyectos 🚀</p>
+                        </div>
+
                         <!--!Tarjetas de proyectos-->
-                        <div class="row  d-flex flex-column flex-lg-row  justify-content-around ">
+                        <div class="row d-flex flex-column flex-lg-row justify-content-around mb-4">
 
                             <!--!Tarjetas de proyectos AtenciaHomes-->
-                            <div class="atenciaTarjeta col-10 col-lg-4 mb-2 mb-lg-0">
+                            <div class="atenciaTarjeta mx-auto mx-lg-0 col-10 col-lg-3 mb-2 mb-lg-0">
                                 <div class="fondoAtencia img-fluid"></div>
 
                                 <div class="textAtencia">
-                                    <h3>Atencia homes</h3>
+                                    <h3> <span class="colorIf">{</span> AtenciaHomes <span class="colorIf">}</span></h3>
                                     <p>Atencia Homes es una web inmobiliaria desarrollada con enfoque en diseño limpio y
                                         navegación intuitiva.Combina estructura con Bootstrap, estilos personalizados y
                                         un
@@ -467,55 +457,106 @@
                                         para un cliente, cuidando tanto la presentación como la funcionalidad en cada
                                         página.</p>
 
-                                    <div class="d-flex">
-                                        <a href="#"><i class="bi bi-globe"></i></a>
-                                        <a href="#"><i class="bi bi-github"></i></a>
+                                    <div class="d-flex gap-3">
+
+                                        <a class="enlaceWeb" href="https://www.atenciahomes.es/" target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label="Abrir sitio web de Atencia Homes en una nueva pestaña">
+                                            <i class="bi bi-globe" aria-hidden="true"></i>
+                                        </a>
+
+                                        <a class="enlaceGit" href="https://github.com/JESUS323DEV/Atencia-homes-oline"
+                                            target="_blank" rel="noopener noreferrer"
+                                            aria-label="Abrir repertorio en GitHub en una nueva pestaña"><i
+                                                class="bi bi-github" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                             </div>
 
                             <!--!Tarjetas de proyectos Game-Lab-->
-                            <div class="gameLabTarjeta col-10 col-lg-3 mb-2 mb-lg-0">
+                            <div class="gameLabTarjeta mx-auto mx-lg-0 col-10 col-lg-3 mb-2 mb-lg-0">
                                 <div class="fondoGameLab img-fluid"></div>
 
                                 <div class="textGameLab">
-                                    <h3>Game-lab</h3>
+                                    <h3><span class="colorCustom">(</span> Game-lab <span class="colorCustom">)</span>
+                                    </h3>
                                     <p>Plataforma donde reúno varios minijuegos desarrollados con JavaScript puro.
                                         Cada juego tiene su propia lógica, interfaz y mecánicas únicas, creadas desde
                                         cero para practicar programación interactiva y diseño dinámico.
                                         Es un proyecto en constante evolución, donde sigo probando ideas, efectos y
                                         mejoras visuales.</p>
 
-                                    <div class="d-flex">
-                                        <a href="#"><i class="bi bi-globe"></i></a>
-                                        <a href="#"><i class="bi bi-github"></i></a>
+                                    <div class="d-flex ">
+                                        <a class="enlaceGit mt-0 mt-lg-4 "
+                                            href="https://jesus323dev.github.io/JESUS323DEV-Portafolio/GameLab/Game_Lab/"
+                                            target="_blank" rel="noopener noreferrer"
+                                            aria-label="Abrir repertorio en GitHub en una nueva pestaña"><i
+                                                class="bi bi-github" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                             </div>
 
-
                             <!--!Tarjetas de proyectos FormLab-->
-
-                            <div class="formLabTarjeta col-10 col-lg-4 mb-2 mb-lg-0">
+                            <div class="formLabTarjeta mx-auto mx-lg-0 col-10 col-lg-3 mb-2 mb-lg-0">
                                 <div class="fondoFormLab img-fluid"></div>
 
                                 <div class="textFormLab">
-                                    <h3>FormLab</h3>
+                                    <h3><span class="small1">[</span> FormLab <span class="small1">]</span></h3>
                                     <p>Espacio dedicado a la creación y prueba de formularios inteligentes con
                                         validaciones en tiempo real.
                                         Combina HTML, CSS y JavaScript para ofrecer una experiencia dinámica, accesible
                                         y visualmente cuidada.
                                         Cada formulario está pensado para practicar lógica, usabilidad y diseño
-                                        adaptable.</p>
+                                        adaptable.
 
-                                    <div class="d-flex">
-                                        <a href="#"><i class="bi bi-globe"></i></a>
-                                        <a href="#"><i class="bi bi-github"></i></a>
+                                    </p>
+
+                                    <div class="d-flex ">
+                                        <a class="enlaceGit2 "
+                                            href="https://jesus323dev.github.io/JESUS323DEV-Portafolio/FormLab/Reservas-Come&Calla/"
+                                            target="_blank" rel="noopener noreferrer"
+                                            aria-label="Abrir repertorio en GitHub en una nueva pestaña"><i
+                                                class="bi bi-github" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                             </div>
 
+
+
                         </div>
+
+
+                        <!--!segunda fila de proyectos-->
+                        <div class="row d-flex flex-column flex-lg-row justify-content-around ">
+
+                            <!--!Tarjetas de proyectos web-chuletas-->
+                            <div class="webChuletasTarjeta mx-auto mx-lg-0 col-10 col-lg-3 mb-2 mb-lg-0">
+                                <div class="fondoWebChuletas img-fluid"></div>
+
+                                <div class="textWebChuletas">
+                                    <h3 class="colorCustom2">"DevChuletas"</h3>
+                                    <p>DevChuletas es mi web de apuntes y recursos sobre desarrollo web.
+                                        Compilo lo que voy aprendiendo en HTML, CSS, Bootstrap y JavaScript,
+                                        organizado como una guía visual y práctica.
+                                        Ideal para repasar rápido sin perder el estilo.</p>
+
+                                    <div class="d-flex">
+                                        <a class="enlaceGit"
+                                            href="https://jesus323dev.github.io/JESUS323DEV-Portafolio/WebChuletas/Web-Chuletas/"
+                                            target="_blank" rel="noopener noreferrer"
+                                            aria-label="Abrir repertorio en GitHub en una nueva pestaña"><i
+                                                class="bi bi-github" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+
+
 
 
 
