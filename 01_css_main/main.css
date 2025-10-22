@@ -458,10 +458,6 @@ li {
         font-size: 2rem;
     }
 
-    .sectionInicioH2 p {
-        font-size: 4rem;
-    }
-
 
     main {
 
@@ -470,10 +466,6 @@ li {
 
     /**============Sobre mi================**/
 
-    #sectionAboutMe p {
-
-        margin-left: 0 !important;
-    }
 
 
     .animationSmall {
@@ -501,21 +493,21 @@ li {
 
     .bg-Notes3 {
 
-        width: 100% !important;
+        width: 90% !important;
         font-size: 13px;
 
     }
 
     .bg-Notes4 {
 
-        width: 80% !important;
+        width: 90% !important;
         font-size: 13px;
 
     }
 
     .bg-Notes5 {
 
-        width: 86% !important;
+        width: 90% !important;
         font-size: 13px;
 
     }
@@ -595,21 +587,14 @@ li {
     .textMobil {
 
         color: rgb(0, 165, 0);
-        font-size: 2rem;
-        text-align: center;
-        padding: 0.5rem;
+        font-size: 1.5rem !important;
+        margin: auto;
+        margin-bottom: 0 !important;
+        margin-top: 1rem;
     }
 
 
-    .textMobil {
 
-        color: rgb(21, 255, 0);
-        font-size: 0.5rem;
-        text-align: center;
-        padding: 0.5rem;
-        margin-bottom: 3rem;
-        width: 83%;
-    }
 
     .enlaceGit2,
     .enlaceGit2 * {
@@ -751,35 +736,35 @@ li {
     }
 
     .bg-Notes1 {
-        width: 55% !important;
+        width: 25% !important;
         font-size: 13px;
 
     }
 
     .bg-Notes2 {
 
-        width: 65% !important;
+        width: 33% !important;
         font-size: 13px;
 
     }
 
     .bg-Notes3 {
 
-        width: 100% !important;
+        width:53% !important;
         font-size: 13px;
 
     }
 
     .bg-Notes4 {
 
-        width: 80% !important;
+        width: 44% !important;
         font-size: 13px;
 
     }
 
     .bg-Notes5 {
 
-        width: 86% !important;
+        width: 45% !important;
         font-size: 13px;
 
     }
@@ -840,24 +825,13 @@ li {
 
     }
 
-
     .textMobil {
 
         color: rgb(0, 165, 0);
         font-size: 2rem;
+        margin-bottom: 0 !important;
+        padding: 20px !important;
         text-align: center;
-        padding: 0.5rem;
-    }
-
-
-    .textMobil {
-
-        color: rgb(21, 255, 0);
-        font-size: 0.5rem;
-        text-align: center;
-        padding: 0.5rem;
-        margin-bottom: 3rem;
-        width: 83%;
     }
 
     .enlaceGit2,
@@ -942,7 +916,10 @@ li {
 
     /* 🔗 Menú navegación */
     .ulStyle ul {
-        margin-left: 0 !important;
+        margin-left: 18% !important;
+        display: flex;
+        flex-direction: row !important;
+
     }
 
     /* 📏 Barra de números de líneas */
@@ -977,7 +954,7 @@ li {
 
     main {
 
-        padding-top: 14.5rem !important;
+        padding-top: 9.5rem !important;
     }
 
     /**============Sobre mi================**/
@@ -999,35 +976,35 @@ li {
     }
 
     .bg-Notes1 {
-        width: 55% !important;
+        width: 20% !important;
         font-size: 13px;
 
     }
 
     .bg-Notes2 {
 
-        width: 65% !important;
+        width: 26% !important;
         font-size: 13px;
 
     }
 
     .bg-Notes3 {
 
-        width: 100% !important;
+        width: 45% !important;
         font-size: 13px;
 
     }
 
     .bg-Notes4 {
 
-        width: 80% !important;
+        width: 36% !important;
         font-size: 13px;
 
     }
 
     .bg-Notes5 {
 
-        width: 86% !important;
+        width: 38% !important;
         font-size: 13px;
 
     }
@@ -1092,20 +1069,12 @@ li {
 
         color: rgb(0, 165, 0);
         font-size: 2rem;
+        margin-bottom: 0 !important;
+        padding: 20px !important;
         text-align: center;
-        padding: 0.5rem;
     }
 
 
-    .textMobil {
-
-        color: rgb(21, 255, 0);
-        font-size: 0.5rem;
-        text-align: center;
-        padding: 0.5rem;
-        margin-bottom: 3rem;
-        width: 83%;
-    }
 
     .enlaceGit2,
     .enlaceGit2 * {
@@ -1183,6 +1152,40 @@ li {
         border: 1px solid rgb(34, 34, 34);
     }
 
+    .bg-Notes1 {
+        width: 25% !important;
+        font-size: 13px;
+
+    }
+
+    .bg-Notes2 {
+
+        width: 30% !important;
+        font-size: 13px;
+
+    }
+
+    .bg-Notes3 {
+
+        width: 53% !important;
+        font-size: 13px;
+
+    }
+
+    .bg-Notes4 {
+
+        width: 42% !important;
+        font-size: 13px;
+
+    }
+
+    .bg-Notes5 {
+
+        width: 44% !important;
+        font-size: 13px;
+
+    }
+
 
 }
 
@@ -1207,6 +1210,40 @@ li {
         top: 9.2rem;
         border-collapse: collapse;
         border: 1px solid rgb(34, 34, 34);
+    }
+
+    .bg-Notes1 {
+        width: 55% !important;
+        font-size: 13px;
+
+    }
+
+    .bg-Notes2 {
+
+        width: 65% !important;
+        font-size: 13px;
+
+    }
+
+    .bg-Notes3 {
+
+        width: 90% !important;
+        font-size: 13px;
+
+    }
+
+    .bg-Notes4 {
+
+        width: 90% !important;
+        font-size: 13px;
+
+    }
+
+    .bg-Notes5 {
+
+        width: 90% !important;
+        font-size: 13px;
+
     }
 
 
@@ -1243,10 +1280,44 @@ li {
     .textWebChuletas h3 {
 
         text-align: center !important;
+    }
 
-
+    .bg-Notes1 {
+        width: 18% !important;
+        font-size: 13px;
 
     }
+
+    .bg-Notes2 {
+
+        width: 22% !important;
+        font-size: 13px;
+
+    }
+
+    .bg-Notes3 {
+
+        width: 38% !important;
+        font-size: 13px;
+
+    }
+
+    .bg-Notes4 {
+
+        width: 30% !important;
+        font-size: 13px;
+
+    }
+
+    .bg-Notes5 {
+
+        width: 33% !important;
+        font-size: 13px;
+
+    }
+
+
+
 
 
 

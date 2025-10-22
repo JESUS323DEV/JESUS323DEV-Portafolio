@@ -132,6 +132,8 @@
     border: 1px solid rgb(55, 55, 55);
     background: linear-gradient(to top, rgba(39, 39, 39, 0), #1E1E1E);
     box-shadow: 10px 10px 10px rgb(46, 46, 46);
+    height: 500px;
+
 }
 
 
@@ -152,7 +154,7 @@
 .textAtencia h3 {
     color: rgb(18, 231, 255);
     font-weight: bold;
-    text-align: start;
+    text-align: center;
     margin-top: 0.5rem;
 }
 
@@ -162,6 +164,14 @@
     border: 1px solid rgb(55, 55, 55);
     background: linear-gradient(to top, rgba(39, 39, 39, 0), #1E1E1E);
     box-shadow: 10px 10px 10px rgb(46, 46, 46);
+    height: 500px;
+
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
 
 
 }
@@ -213,7 +223,7 @@
 
     color: rgb(37, 84, 255);
     font-weight: bold;
-    text-align: start;
+    text-align: center;
     margin-top: 0.5rem;
 }
 
@@ -225,6 +235,12 @@
     border: 1px solid rgb(55, 55, 55);
     background: linear-gradient(to top, rgba(39, 39, 39, 0), #1E1E1E);
     box-shadow: 10px 10px 10px rgb(46, 46, 46);
+    height: 500px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
 
 
 }
@@ -275,7 +291,7 @@
 
     color: rgb(255, 179, 3);
     font-weight: bold;
-    text-align: start;
+    text-align: center;
     margin-top: 0.5rem;
 
 
@@ -287,7 +303,12 @@
     border: 1px solid rgb(55, 55, 55);
     background: linear-gradient(to top, rgba(39, 39, 39, 0), #1E1E1E);
     box-shadow: 10px 10px 10px rgb(46, 46, 46);
+    height: 500px;
 
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
 }
 
@@ -336,7 +357,7 @@
 .textWebChuletas h3 {
     color: rgb(252, 193, 111);
     font-weight: bold;
-    text-align: start;
+    text-align: center;
     margin-top: 0.5rem;
 
 }
