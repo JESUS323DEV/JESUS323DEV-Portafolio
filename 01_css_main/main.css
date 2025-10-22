@@ -351,6 +351,12 @@ li {
 }
 
 
+
+/* ─────────────────────────────── */
+/* 📱 MEDIA QUERIES RESPONSIVE */
+/* ─────────────────────────────── */
+
+
 @media (max-width: 767px) {
 
     .atenciaTarjeta,
@@ -364,6 +370,21 @@ li {
         width: 90% !important;
         max-width: 400px !important;
     }
+
+    .row {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: flex-start !important;
+        flex-wrap: wrap !important;
+        gap: 1rem;
+    }
+
+    .row>div {
+        flex: 0 1 90% !important;
+        max-width: 800px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
 }
 
 
@@ -374,7 +395,6 @@ li {
 
 /* Móviles XS (≤575px) */
 @media (max-width: 575px) {
-
 
     /**Inicio**/
     /* 🧱 Indicador visual (solo para debug) */
@@ -388,6 +408,8 @@ li {
         padding: 5px;
         z-index: 9999;
     }
+
+
 
 
 
@@ -656,6 +678,7 @@ li {
 
 
 
+
     /* 🏠 Sección principal */
     .mainInicio {
         min-height: 100vh;
@@ -812,8 +835,11 @@ li {
         border: 1px solid rgb(31, 31, 31);
         background: linear-gradient(to top, rgba(39, 39, 39, 0), #1E1E1E);
         box-shadow: none !important;
-        margin: auto;
+
+
+
     }
+
 
     .textMobil {
 
@@ -884,14 +910,6 @@ li {
 
 
 }
-
-
-
-
-
-
-
-
 
 /* Tablets verticales MD (768px – 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
@@ -1133,10 +1151,11 @@ li {
         gap: 0 !important;
         border: none !important;
 
-
     }
 
+
 }
+
 
 /* iPad Pro Vertical (Portrait) */
 @media (min-width: 834px) and (max-width: 1024px) {}
@@ -1153,8 +1172,18 @@ li {
         color: rgb(0, 0, 0);
         padding: 5px;
         z-index: 9999;
-
     }
+
+    .fixedBarras {
+        position: fixed;
+        left: 0 !important;
+        width: 33% !important;
+        top: 9.2rem;
+        border-collapse: collapse;
+        border: 1px solid rgb(34, 34, 34);
+    }
+
+
 }
 
 
@@ -1169,12 +1198,21 @@ li {
         color: rgb(255, 255, 255);
         padding: 5px;
         z-index: 9999;
-
     }
+
+    .fixedBarras {
+        position: fixed;
+        left: 0 !important;
+        width: 29% !important;
+        top: 9.2rem;
+        border-collapse: collapse;
+        border: 1px solid rgb(34, 34, 34);
+    }
+
+
 }
 
-/* iPad Pro Horizontal (Landscape) */
-@media (min-width: 1025px) and (max-width: 1366px) {}
+
 
 /* NEST HUB MAX Y SIMILARES (1280px – 1399px) */
 @media (min-width: 1280px) and (max-width: 1399px) {
@@ -1189,6 +1227,29 @@ li {
         padding: 5px;
         z-index: 9999;
     }
+
+    .fixedBarras {
+        position: fixed;
+        left: 0 !important;
+        width: 29% !important;
+        top: 9.2rem;
+        border-collapse: collapse;
+        border: 1px solid rgb(34, 34, 34);
+    }
+
+    .textAtencia h3,
+    .textGameLab h3,
+    .textFormLab h3,
+    .textWebChuletas h3 {
+
+        text-align: center !important;
+
+
+
+    }
+
+
+
 }
 
 /* Pantallas grandes XXL ≥1400px */
