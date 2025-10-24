@@ -1,5 +1,7 @@
 const btnEnviar = document.getElementById("btnEnviar");
 const btnConfirmDatos = document.getElementById("btnConfirmDatos");
+const btnConfirmReserva = document.getElementById("btnConfirmReserva");
+const btnAtras = document.getElementById("btnAtras");
 
 const checkAceptar = document.getElementById("checkAceptar");
 
@@ -22,18 +24,54 @@ const labelClientes = document.getElementById("labelClientes");
 const labelComentarios = document.getElementById("labelComentarios");
 
 const fase1 = document.getElementById("fase1");
-const fase2 = document.getElementById("fase2")
+const fase2 = document.getElementById("fase2");
+const resumenReserva = document.getElementById("resumenReserva");
+
+
+localStorage.clear();
+
+
+
+btnAtras.addEventListener("click", () => {
+    if (!resumenReserva.classList.contains("d-none")) {
+        // Si estás en el resumen → volver a fase 2
+        resumenReserva.classList.add("d-none");
+        fase2.classList.remove("d-none");
+        btnConfirmReserva.classList.add("d-none");
+
+    } else if (!fase2.classList.contains("d-none")) {
+        // Si estás en la fase 2 → volver a fase 1
+        fase2.classList.add("d-none");
+        fase1.classList.remove("d-none");
+        btnAtras.classList.add("d-none");
+        btnConfirmReserva.classList.add("d-none");
+
+
+    }
+
+
+});
+
 
 //fase1
 btnConfirmDatos.addEventListener("click", function () {
 
-
-
     if (validarName() && validarFecha() && validarHora() && validarClientes()) {
+
+        localStorage.setItem("nombre", inputName.value);
+        localStorage.setItem("fecha", inputFecha.value);
+        localStorage.setItem("hora", inputHora.value);
+        localStorage.setItem("numClientes", inputNumClientes.value);
+
+
+
         fase1.classList.add("d-none");
         fase2.classList.remove("d-none");
-
     }
+
+    console.log(localStorage);
+
+
 });
 
 
@@ -147,9 +185,11 @@ inputNumClientes.addEventListener("input", validarClientes);
 
 function validarClientes() {
 
+
+
     let clientesValidar = Number(inputNumClientes.value);
 
-    if (clientesValidar) {
+    if (clientesValidar > 0 && clientesValidar <= 15) {
 
         labelClientes.textContent = "✔"
         return true;
@@ -163,14 +203,7 @@ function validarClientes() {
 
     }
 
-
-
-
 };
-
-
-
-
 
 
 
@@ -180,11 +213,40 @@ btnEnviar.addEventListener("click", function () {
 
     if (validarTel() && validarEmail() && validarCheckBox()) {
 
-        alert("Reserva Correcta")
+        localStorage.setItem("tel", inputTel.value);
+        localStorage.setItem("email", inputEmail.value);
+        localStorage.setItem("comentarios", inputComentarios.value);
+        localStorage.setItem("nombre", inputName.value);
+        localStorage.setItem("fecha", inputFecha.value);
+        localStorage.setItem("hora", inputHora.value);
+        localStorage.setItem("numClientes", inputNumClientes.value);
+
+
+
+        document.getElementById("resumenReserva").innerHTML = `
+    <p><strong>Nombre:</strong> ${localStorage.getItem("nombre")}</p>
+    <p><strong>Tel:</strong> ${localStorage.getItem("tel")}</p>
+    <p><strong>Email:</strong> ${localStorage.getItem("email")}</p>
+    <p><strong>Fecha:</strong> ${localStorage.getItem("fecha")}</p>
+    <p><strong>Hora:</strong> ${localStorage.getItem("hora")}</p>
+    <p><strong>Número de clientes:</strong> ${localStorage.getItem("numClientes")}</p>
+    <p><strong>Comentarios:</strong> ${localStorage.getItem("comentarios")}</p>
+`;
+
+
+        fase2.classList.add("d-none");
+        resumenReserva.classList.remove("d-none");
+
+        btnConfirmReserva.classList.remove("d-none");
+        btnAtras.classList.remove("d-none");
+
+
 
     } else {
 
     };
+
+    console.log(localStorage);
 });
 
 //Funciones que se aplican en la fase 2
