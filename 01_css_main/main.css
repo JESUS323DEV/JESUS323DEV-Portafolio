@@ -398,7 +398,7 @@ li {
 
     /**Inicio**/
     /* 🧱 Indicador visual (solo para debug) */
- 
+
     /* 🏠 Sección principal */
     .mainInicio {
         min-height: 100vh;
@@ -725,7 +725,7 @@ li {
 
     .bg-Notes3 {
 
-        width:53% !important;
+        width: 53% !important;
         font-size: 13px;
 
     }
@@ -1097,7 +1097,7 @@ li {
 /* Tablets horizontales / laptops pequeñas LG (992px – 1199px) */
 @media (min-width: 992px) and (max-width: 1199px) {
 
- 
+
 
     .fixedBarras {
         position: fixed;
@@ -1263,4 +1263,5 @@ li {
 /* Pantallas grandes XXL ≥1400px */
 @media (min-width: 1400px) {
 
+  
 }
