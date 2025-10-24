@@ -8,7 +8,12 @@ input:-webkit-autofill {
     transition: background-color 5000s ease-in-out 0s;
 }
 
-body {
+
+
+
+
+.fondo {
+
     position: relative;
     background-image: url(../media/img/fondo-main.jpg);
     background-position: center;
@@ -17,20 +22,24 @@ body {
     display: flex;
 
     flex-direction: column;
-    min-height: 120vh;
-
+    min-height: 100vh;
+    z-index: 0;
 }
 
-body::before {
+.fondo::before {
     position: absolute;
     content: "";
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.497);
     z-index: -1;
+
 }
+
+
+
 
 main {
     margin-top: 8%;
@@ -63,4 +72,316 @@ main {
     transform: scale(1.2);
     border: none;
     border-bottom: 1px solid red;
+}
+
+/* ----------------------------- */
+/* 🗺️ Código Postal
+/* ----------------------------- */
+.contInput {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.contInput h2 {
+
+    text-align: center;
+    font-size: 3.5rem;
+    margin-right: 1.5rem;
+    color: black;
+    font-weight: bold;
+    padding: 0.5rem;
+}
+
+
+.contPostal {
+    position: relative;
+    gap: 0;
+    width: 40%;
+    margin: auto;
+}
+
+
+.postalBtn {
+    position: absolute;
+    top: 0;
+    right: 2.9rem;
+    width: 9.2%;
+    height: 3rem;
+    border: none;
+    outline: none;
+}
+
+.contPostal input {
+
+    width: 90%;
+    height: 3rem;
+    border-radius: 1rem;
+    border: 1px solid rgb(27, 26, 26);
+    outline: none;
+    margin-left: 1.5rem;
+    padding-left: 1rem;
+}
+
+.postalBtn {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.contPostal input::placeholder {
+    font-size: 1rem;
+
+
+}
+
+/* ----------------------------- */
+/* PEDIDOS
+/* ----------------------------- */
+
+.contImg {
+
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+
+
+}
+
+.contImg img {
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    margin-bottom: 0.9rem;
+    border: 2px solid transparent;
+}
+
+
+.contImg button {
+
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: auto;
+    background-color: transparent;
+}
+
+.contImg button:hover img {
+
+    border: 2px solid rgb(0, 0, 0);
+    transform: scale(0.9);
+    outline: none;
+    transition: 0.8s ease-in-out;
+}
+
+.contImg button:focus img {
+
+    transform: scale(1);
+    transition: 0.8s ease-in-out;
+    border: 2px solid rgb(0, 0, 0);
+
+
+}
+
+
+
+
+.bebidas ul,
+.patatasFritas ul,
+.fastFood ul,
+.hamburguesa ul {
+
+
+
+    height: 180px;
+    list-style: none;
+    padding-left: 0;
+    background-color: white;
+}
+
+.bebidas li,
+.patatasFritas li,
+.fastFood li,
+.hamburguesa li {
+
+    display: flex;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+    align-items: center;
+
+    padding: 0.5rem;
+
+}
+
+#listBebidas button,
+#listPatatas button,
+#listFastFood button,
+#listHamburguesa button {
+
+    color: rgb(0, 0, 0) !important;
+    border: 1px solid gray;
+}
+
+
+/* =====================
+   MEDIA QUERIES RESPONSIVE
+   ===================== */
+
+/* Móviles XS (≤575px) */
+@media (max-width: 575px) {
+    body::before {
+        content: "≤575px XS";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        background: rgb(185, 6, 6);
+        color: rgb(0, 0, 0);
+        padding: 5px;
+        z-index: 9999;
+
+    }
+
+    .contImg {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.7rem;
+    }
+
+    .contPostal {
+        position: relative;
+        gap: 0;
+        width: 100%;
+        margin: auto;
+    }
+
+    .postalBtn {
+        position: absolute;
+        top: 0;
+        right: 1.3rem;
+        width: 9.2%;
+        height: 3rem;
+        border: none;
+        outline: none;
+    }
+
+
+}
+
+/* Móviles verticales SM (576px – 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    body::before {
+        content: "576px-767px SM";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        background: rgb(0, 255, 30);
+        color: rgb(0, 0, 0);
+        padding: 5px;
+        z-index: 9999;
+
+    }
+}
+
+/* Tablets verticales MD (768px – 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    body::before {
+        content: "768px-991px MD";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        background: rgb(1, 22, 255);
+        color: rgb(0, 0, 0);
+        padding: 5px;
+        z-index: 9999;
+
+    }
+}
+
+/* iPad Pro Vertical (Portrait) */
+@media (min-width: 834px) and (max-width: 1024px) {}
+
+/* Tablets horizontales / laptops pequeñas LG (992px – 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    body::before {
+        content: "992px-1199px LG";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        background: rgb(196, 1, 255);
+        color: rgb(0, 0, 0);
+        padding: 5px;
+        z-index: 9999;
+
+    }
+}
+
+
+/*NEST HUB NORMAL YS I (1200px – 1279px) */
+@media (min-width: 1200px) and (max-width: 1279px) {
+    body::before {
+        content: "1200px-1279px";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        background: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+        padding: 5px;
+        z-index: 9999;
+
+    }
+}
+
+/* iPad Pro Horizontal (Landscape) */
+@media (min-width: 1025px) and (max-width: 1366px) {}
+
+/* NEST HUB MAX Y SIMILARES (1280px – 1399px) */
+@media (min-width: 1280px) and (max-width: 1399px) {
+
+    body::before {
+        content: "1200px-1279px";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        background: rgb(255, 102, 0);
+        color: rgb(255, 255, 255);
+        padding: 5px;
+        z-index: 9999;
+    }
+}
+
+/* Pantallas grandes XXL ≥1400px */
+@media (min-width: 1400px) {
+    body::before {
+        content: "1200px-1279px";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        background: rgb(135, 181, 255);
+        color: rgb(255, 255, 255);
+        padding: 5px;
+        z-index: 9999;
+    }
 }

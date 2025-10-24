@@ -24,162 +24,163 @@
 <body>
 
     <!--! HEADER MENU NAV-->
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary styleNav">
-            <div class="container-fluid">
+    <div class="fondo">
+        <header>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary styleNav">
+                <div class="container-fluid">
 
 
-                <a class="navbar-brand" href="#"><img class="logo p-2 mx-5" src="media/img/logo.png" alt=""></a>
+                    <a class="navbar-brand" href="#"><img class="logo p-2 mx-5" src="media/img/logo.png" alt=""></a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                        </li>
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Reserva de mesa</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Reserva de mesa</a>
+                            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="html/delivery.html">Pedidos delivery</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="html/delivery.html">Pedidos delivery</a>
+                            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">contacto</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">contacto</a>
+                            </li>
 
-                        <li class="nav-item dropdown mx-5">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Regístrate
-                            </a>
-                            <ul class="dropdown-menu ">
-                                <li><a class="dropdown-item" href="#">Registro</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Login</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-
-
+                            <li class="nav-item dropdown mx-5">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Regístrate
+                                </a>
+                                <ul class="dropdown-menu ">
+                                    <li><a class="dropdown-item" href="#">Registro</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Login</a></li>
+                                </ul>
+                            </li>
+                        </ul>
 
 
 
+
+
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </header>
+            </nav>
+        </header>
 
-    <main class="bg-main">
+        <main class="bg-main">
 
-        <form id="formu" class="">
-            <div class="container width-formu mx-auto">
-                <div class=" d-flex flex-column align-items-center  my-auto bg-formu">
-                    <h1 class="text-center formu-h1">Come & Calla</h1>
+            <form id="formu" class="">
+                <div class="container width-formu mx-auto">
+                    <div class=" d-flex flex-column align-items-center  my-auto bg-formu">
+                        <h1 class="text-center formu-h1">Come & Calla</h1>
 
-                    <p class=" formu-p">Reserva Online</p>
+                        <p class=" formu-p">Reserva Online</p>
 
-                    <!--!Fase 1 Confirmación de disponibilidad-->
-                    <div id="fase1">
-                        <!--!Nombre-->
-                        <div class="">
-                            <label id="labelName" for="inputName"></label>
-                            <input type="text" name="" id="inputName" placeholder="Nombre">
-                        </div>
-
-
-                        <!--!Fecha-->
-                        <div class="contHoraFecha">
-                            <div class=" ">
-                                <label id="labelFecha" for="inputFecha"></label>
-                                <input type="date" class="Fecha" id="inputFecha">
-                            </div>
-                            <!--!Hora-->
+                        <!--!Fase 1 Confirmación de disponibilidad-->
+                        <div id="fase1">
+                            <!--!Nombre-->
                             <div class="">
-                                <label id="labelHora" for="inputHora"></label>
-                                <input type="time" class="Hora" name="" id="inputHora">
+                                <label id="labelName" for="inputName"></label>
+                                <input type="text" name="" id="inputName" placeholder="Nombre">
+                            </div>
+
+
+                            <!--!Fecha-->
+                            <div class="contHoraFecha">
+                                <div class=" ">
+                                    <label id="labelFecha" for="inputFecha"></label>
+                                    <input type="date" class="Fecha" id="inputFecha">
+                                </div>
+                                <!--!Hora-->
+                                <div class="">
+                                    <label id="labelHora" for="inputHora"></label>
+                                    <input type="time" class="Hora" name="" id="inputHora">
+                                </div>
+                            </div>
+
+
+                            <!--!Numero de personas-->
+                            <div class="d-flex flex-column">
+                                <label id="labelClientes" for="inputNumClientes"></label>
+                                <input type="number" min="1" max="15" name="" id="inputNumClientes"
+                                    placeholder="Número de personas">
+                            </div>
+
+                            <!--!Botón de confirmar disponibilidad-->
+                            <div class="text-center">
+                                <button type="button" id="btnConfirmDatos" class="mt-3">Confirmar</button>
                             </div>
                         </div>
 
 
-                        <!--!Numero de personas-->
-                        <div class="d-flex flex-column">
-                            <label id="labelClientes" for="inputNumClientes"></label>
-                            <input type="number" min="1" max="15" name="" id="inputNumClientes"
-                                placeholder="Número de personas">
+                        <!--!Fase 2 Confirmación de datos-->
+                        <div id="fase2" class="d-none">
+
+
+                            <!--!Teléfono-->
+                            <div class="d-flex flex-column">
+                                <label id="labelTel" for="inputTel"></label>
+                                <input type="tel" name="" id="inputTel" placeholder="Teléfono +34699974448">
+                            </div>
+
+                            <!--!Email-->
+                            <div class="d-flex flex-column">
+                                <label id="labelEmail" for="inputEmail"></label>
+                                <input type="email" name="" id="inputEmail" placeholder="Email">
+                            </div>
+
+                            <!--!Comentarios-->
+                            <div class="d-flex flex-column">
+                                <label id="labelComentarios" for="inputComentarios"></label>
+                                <textarea id="inputComentarios" placeholder="Comentarios"></textarea>
+                            </div>
+
+
+                            <!--!Términos y condiciones-->
+                            <div class="d-flex  mt-1 flex-column text-center">
+                                <label for="checkAceptar">Aceptar Términos y condiciones</label>
+                                <small id="textCheck"></small>
+                                <input type="checkbox" name="" id="checkAceptar">
+                            </div>
+
+
+                            <!--!Botón de confirmar Reserva-->
+                            <div class="text-center">
+                                <button id="btnEnviar" type="button">Enviar</button>
+                            </div>
                         </div>
 
-                        <!--!Botón de confirmar disponibilidad-->
-                        <div class="text-center">
-                            <button type="button" id="btnConfirmDatos" class="mt-3">Confirmar</button>
-                        </div>
-                    </div>
+                        <!--!Fase 3 -->
+                        <div id="resumenReserva"></div>
 
-
-                    <!--!Fase 2 Confirmación de datos-->
-                    <div id="fase2" class="d-none">
-
-
-                        <!--!Teléfono-->
-                        <div class="d-flex flex-column">
-                            <label id="labelTel" for="inputTel"></label>
-                            <input type="tel" name="" id="inputTel" placeholder="Teléfono +34699974448">
-                        </div>
-
-                        <!--!Email-->
-                        <div class="d-flex flex-column">
-                            <label id="labelEmail" for="inputEmail"></label>
-                            <input type="email" name="" id="inputEmail" placeholder="Email">
-                        </div>
-
-                        <!--!Comentarios-->
-                        <div class="d-flex flex-column">
-                            <label id="labelComentarios" for="inputComentarios"></label>
-                            <textarea id="inputComentarios" placeholder="Comentarios"></textarea>
-                        </div>
-
-
-                        <!--!Términos y condiciones-->
-                        <div class="d-flex  mt-1 flex-column text-center">
-                            <label for="checkAceptar">Aceptar Términos y condiciones</label>
-                            <small id="textCheck"></small>
-                            <input type="checkbox" name="" id="checkAceptar">
-                        </div>
-
-
-                        <!--!Botón de confirmar Reserva-->
-                        <div class="text-center">
-                            <button id="btnEnviar" type="button">Enviar</button>
+                        <div class="">
+                            <button id="btnAtras" type="button" class="d-none">Atrás</button>
+                            <button id="btnConfirmReserva" type="button" class="d-none">Confirmar Reserva</button>
                         </div>
                     </div>
-                    
-                    <!--!Fase 3 -->
-                    <div id="resumenReserva"></div>
 
-                    <div class="">
-                        <button id="btnAtras" type="button" class="d-none">Atrás</button>
-                        <button id="btnConfirmReserva" type="button" class="d-none">Confirmar Reserva</button>
-                    </div>
+
                 </div>
 
+            </form>
+        </main>
 
-            </div>
-
-        </form>
-    </main>
-
+    </div>
     <footer>
-
         <div class="styleNav text-center p-2 ">
             <p class="mt-1">Proyecto personal de Yisus. Desarrollado con HTML, CSS y JavaScript.</p>
             <a class="nav-link py-1" href="https://github.com/JESUS323DEV " target="_blank">GitHub: JESUS323DEV</a>

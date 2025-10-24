@@ -45,9 +45,9 @@ btnAtras.addEventListener("click", () => {
         fase1.classList.remove("d-none");
         btnAtras.classList.add("d-none");
         btnConfirmReserva.classList.add("d-none");
-
-
     }
+
+
 
 
 });
