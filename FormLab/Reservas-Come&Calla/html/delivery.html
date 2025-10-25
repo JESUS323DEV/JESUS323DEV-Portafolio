@@ -22,11 +22,60 @@
 <body>
 
 
+    <!--! Modal Carrito -->
+    <div class="modal fade " id="modalCarrito" tabindex="-1" aria-labelledby="modalCarritoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg ">
+
+            <div class="modal-content mx-auto">
+                <div class="modal-header border">
+                    <div id="modalHeader" class="d-flex flex-column align-content-center justify-content-center">
+
+                        <h5 class="modal-title " id="modalCarritoLabel">🛒 Tu pedido</h5>
+                        <p class="d-flex mt-2 "><i class="bi bi-exclamation-circle-fill text-danger mx-1"></i>Inicia
+                            sesión o regístrate para no
+                            perder <br> tus productos de la cesta de la compra</p>
+                        <div class="d-flex text-center">
+                            <button>Login</button>
+                            <button>Registrarte</button>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn-close border mb-5" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+
+
+                </div>
+
+
+                <div class="modal-body">
+                    <p>Envío a domicilio: <i class="bi bi-bicycle text-warning fs-2"></i> </p>
+                    <p id="cuentaTotal" class="text-bg-danger border rounded w-50 text-center"></p>
+
+
+                    <ul id="listCarrito" class="list-group ">
+                        <!--! Aquí se insertarán los productos con JS -->
+                    </ul>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir
+                        pidiendo</button>
+                    <button type="button" class="btn btn-success" id="btnConfirmarPedido">Confirmar
+                        pedido</button>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
     <!--! HEADER MENU NAV-->
     <div class="fondo">
         <header>
             <nav class="navbar navbar-expand-lg bg-body-tertiary styleNav">
-                <div class="container-fluid">
+                <div class="container-fluid ">
 
 
                     <a class="navbar-brand" href="#"><img class="logo p-2 mx-5" src="../media/img/logo.png" alt=""></a>
@@ -37,9 +86,9 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 ">
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="#">Inicio</a>
                             </li>
@@ -69,12 +118,19 @@
                                     <li><a class="dropdown-item" href="#">Login</a></li>
                                 </ul>
                             </li>
-                        </ul>
 
+                            <li><button id="btnCarrito" class="carrito " type="button"><i
+                                        class="bi bi-cart2"></i></button></li>
+                        </ul>
                     </div>
+
                 </div>
             </nav>
         </header>
+
+
+
+
 
         <!--! MAIN-->
         <main>
@@ -91,30 +147,31 @@
 
             </div>
 
-
-
-
             <!--!Pedidos-->
             <div id="sectionPedidos" class="container  d-none">
-                <h3 class="text-center fs-1 text-white pb-3">Escoge tu pedido</h3>
+                <h3 class="text-center fs-1 text-warning pb-3">Escoge tu pedido</h3>
 
                 <div class="contImg">
 
                     <!--!Pedidos - Bebidas-->
                     <div class="bebidas">
-                        <h5 class="text-center  text-white">Bebidas</h5>
+                        <h5 class="text-center  text-warning">Bebidas</h5>
 
                         <button id="btnBebidas"><img src="../media/img/bebidas.jpg" alt="Bebidas"></button>
 
                         <div id="listBebidas" class="d-none ">
                             <ul>
-                                <li>Cócteles 🍹 <div><button>+</button> <button>-</button></div>
+                                <li>Cócteles🍹 <br> uni. 2.50€ <div><button class="btn-sumar">+</button> <button
+                                            class="btn-restar">-</button></div>
                                 </li>
-                                <li>Cerveza 🍺 <div><button>+</button> <button>-</button></div>
+                                <li>Cerveza🍺 <br> uni. 2.50€ <div><button class="btn-sumar">+</button> <button
+                                            class="btn-restar">-</button></div>
                                 </li>
-                                <li>Gin-Tonic🍸 <div><button>+</button> <button>-</button></div>
+                                <li>Gin-Tonic🍸<br> uni. 2.00€ <div><button class="btn-sumar">+</button> <button
+                                            class="btn-restar">-</button></div>
                                 </li>
-                                <li>CocaCola 🥤 <div><button>+</button> <button>-</button></div>
+                                <li>CocaCola🥤<br> uni. 2.00€ <div><button class="btn-sumar">+</button> <button
+                                            class="btn-restar">-</button></div>
                                 </li>
                             </ul>
                         </div>
@@ -122,18 +179,25 @@
 
                     <!--!Pedidos - Patatas fritas-->
                     <div class="patatasFritas">
-                        <h5 class="text-center  text-white">Patatas fritas</h5>
+                        <h5 class="text-center  text-warning">Patatas fritas</h5>
                         <button id="btnFritas"><img src="../media/img/patatas-fritas.jpg" alt="Patatas fritas"></button>
 
                         <div id="listPatatas" class="d-none">
                             <ul>
-                                <li>🍟 Patatas fritas small <div><button>+</button> <button>-</button></div>
+                                <li>Patatas fritas <br> small🍟 uni. 2.00€ <div><button class="btn-sumar">+</button>
+                                        <button class="btn-restar">-</button>
+                                    </div>
                                 </li>
-                                <li>🍟 Patatas fritas medianas <div><button>+</button> <button>-</button></div>
+                                <li>Patatas fritas <br> medianas🍟 uni. 3.00€ <div><button class="btn-sumar">+</button>
+                                        <button class="btn-restar">-</button>
+                                    </div>
                                 </li>
-                                <li>🍟 Patas fritas grandes <div><button>+</button> <button>-</button></div>
+                                <li>Patas fritas <br> grandes🍟uni. 3.50€ <div><button class="btn-sumar">+</button>
+                                        <button class="btn-restar">-</button>
+                                    </div>
                                 </li>
-                                <li>🍟 Patatas bravas <div><button>+</button> <button>-</button></div>
+                                <li>Patatas bravas <br> 🍟uni. 2.50€ <div><button class="btn-sumar">+</button> <button
+                                            class="btn-restar">-</button></div>
                                 </li>
                             </ul>
                         </div>
@@ -141,17 +205,22 @@
 
                     <!--!Pedidos - Fast food-->
                     <div class="fastFood">
-                        <h5 class="text-center  text-white">Fast food</h5>
+                        <h5 class="text-center  text-warning">Fast food</h5>
                         <button id="btnFastFood"><img src="../media/img/fast-food.jpg" alt="Comida Rápida"></button>
                         <div id="listFastFood" class="d-none">
                             <ul>
-                                <li>🍕 Pizza familiar <div><button>+</button> <button>-</button></div>
+                                <li>Pizza familiar🍕 <br> uni. 3.00€<div><button class="btn-sumar">+</button> <button
+                                            class="btn-restar">-</button></div>
                                 </li>
-                                <li>🌭 Perrito caliente <div><button>+</button> <button>-</button></div>
+                                <li>Perrito caliente🌭<br> uni. 2.00€<div><button class="btn-sumar">+</button> <button
+                                            class="btn-restar">-</button>
+                                    </div>
                                 </li>
-                                <li>🥓 Bacon frito <div><button>+</button> <button>-</button></div>
+                                <li>Bacon frito🥓<br> uni. 1.50€<div><button class="btn-sumar">+</button> <button
+                                            class="btn-restar">-</button></div>
                                 </li>
-                                <li>🌯 Burrito <div><button>+</button> <button>-</button></div>
+                                <li>Burrito🌯<br> uni. 3.00€<div><button class="btn-sumar">+</button> <button
+                                            class="btn-restar">-</button></div>
                                 </li>
                             </ul>
                         </div>
@@ -160,18 +229,26 @@
 
                     <!--!Pedidos - Hamburguesas-->
                     <div class="hamburguesa">
-                        <h5 class="text-center text-white">Hamburguesa</h5>
+                        <h5 class="text-center text-warning">Hamburguesa</h5>
                         <button id="btnHamburger" class=""><img src="../media/img/hamburgesas.jpg"
                                 alt="Hamburguesas"></button>
                         <div id="listHamburguesa" class="d-none">
                             <ul>
-                                <li>🍔 Hamburguesa grande <div><button>+</button> <button>-</button></div>
+                                <li>Hamburguesa grande🍔<br> uni. 10.00€<div><button class="btn-sumar">+</button>
+                                        <button class="btn-restar">-</button>
+                                    </div>
                                 </li>
-                                <li>🍔 Hamburguesa celiaca <div><button>+</button> <button>-</button></div>
+                                <li>Hamburguesa celiaca🍔<br> uni. 12.00€<div><button class="btn-sumar">+</button>
+                                        <button class="btn-restar">-</button>
+                                    </div>
                                 </li>
-                                <li>🍔 Hamburguesa vegana <div><button>+</button> <button>-</button></div>
+                                <li>Hamburguesa vegana🍔<br> uni. 9.00€ <div><button class="btn-sumar">+</button>
+                                        <button class="btn-restar">-</button>
+                                    </div>
                                 </li>
-                                <li>🍔 Hamburguesa normal <div><button>+</button> <button>-</button></div>
+                                <li>Hamburguesa normal🍔<br> uni. 8.00€ <div><button class="btn-sumar">+</button>
+                                        <button class="btn-restar">-</button>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
@@ -186,20 +263,22 @@
 
 
 
-
-
-
-
-
-
-
-
         </main>
 
     </div>
 
 
-        <footer>
+
+
+
+
+
+
+
+
+
+
+    <footer>
         <div class="styleNav text-center p-2 ">
             <p class="mt-1">Proyecto personal de Yisus. Desarrollado con HTML, CSS y JavaScript.</p>
             <a class="nav-link py-1" href="https://github.com/JESUS323DEV " target="_blank">GitHub: JESUS323DEV</a>
