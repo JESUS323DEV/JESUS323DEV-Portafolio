@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="author" content="Yisus">
+    <meta name="description" content="">
+
+    <!--!Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!--!Bootstrap  Iconos-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="css/estilos_main.css">
+    <link rel="stylesheet" href="css/animaciones_main.css">
+
+    <title>Lady.exe</title>
+</head>
+
+<body>
+    <!--! HUD BATALLA-PRINCIPAL-->
+    <div class="bgPrincipal">
+        <div class="contHud">
+
+            <!--!IMG PLAYER-LADY-->
+            <div class="contPlayer ">
+                <img id="ladyImg" src="assets/img/lady-pixel1.png" alt="Player1">
+            </div>
+
+
+
+            <!--!ACTION BAR ATAQUES - MORDISCO - ELÉCTRICO-->
+            <div class="actionBar ">
+
+                <div class="attackBar">
+
+                    <div id="sectionAttack" class="sectionAtaques">
+                        <!--! Ataque mordisco-->
+                        <p id="textMordisco">Mordisco <small>(Daño físico)</small></p>
+                        <button id="btnMordisco" class="btnAtaque" data-ataque="mordisco"><img
+                                src="assets/img/ataque_mordisco.png" alt="Ataque Mordisco"></button>
+
+                        <!--! Ataque eléctrico-->
+                        <p id="textElectrico">Pelota Eléctrica <br> <small>(Daño Eléctrico)</small></p>
+                        <button id="btnElectrico" class="btnAtaque" data-ataque="pelotaElectrica">
+                            <img src="assets/img/pelota-electrica.png" alt="Ataque Pelota Eléctrica"></button>
+
+                    </div>
+
+                    <div id="sectionShield" class="sectionEscudos d-none">
+                        <!--!Escudo fisico-->
+                        <p id="textEscudoFisico" class="">Escudo fisico <small>(Defensa física)</small></p>
+                        <button id="btnShieldFisico" class=" btnEscudo" data-escudo="shieldFisico">
+                            <img src="assets/img/escudo-fisico.png" alt=""></button>
+
+
+
+                        <!--!Escudo elemental-->
+                        <p id="textEscudoElemen" class="">Escudo Elemental <br> <small>(Defensa Elemental)</small>
+                        </p>
+                        <button id="btnShieldElemen" class="btnEscudo" data-escudo="shieldElemen">
+                            <img src="assets/img/escudo-elemental.png" alt=""></button>
+                    </div>
+
+                </div>
+
+
+
+                <!--!BUTTON ACTION BAR ATACAR-DEFENDERSE-->
+                <div class="btnAction">
+                    <button id="btnAttack" class="attackBtn "><small>Atacar</small><img
+                            src="assets/img/espada-atacar.png" alt=""></button>
+
+                    <button id="btnShield" class="shieldBtn  d-none"><small>Defensa</small><img class="imgShield"
+                            src="assets/img/escudo-denfender.png" alt=""></button>
+
+                </div>
+
+
+
+
+
+                <!--!SNACK BAR-->
+                <div class="itemsBar ">
+                    <img id="snackCurar" src="assets/img/curar-snack.png" alt="">
+                    <img id="snackCritico" src="assets/img/critico-snack.png" alt="">
+                    <img id="snackAtaque" src="assets/img/ataque-snack.png" alt="">
+                </div>
+            </div>
+
+
+            <!--!IMG CPU-->
+            <div class="contCpu  ">
+                <img id="cpuImg" src="assets/img/enemigo1.png" alt="Enemigo1">
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <script src="js/scrip_main.js"></script>
+</body>
+
+</html>
