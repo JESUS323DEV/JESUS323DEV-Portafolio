@@ -1,5 +1,5 @@
 self.addEventListener("install", event => {
-    console.log("Service Worker instalado 💾");
+    console.log("Service Worker instalado");
     event.waitUntil(
         caches.open("lady-cache-v1").then(cache => {
             return cache.addAll([
@@ -7,8 +7,8 @@ self.addEventListener("install", event => {
                 "./index.html",
                 "./css/style.css",
                 "./js/main.js",
-                "./media/img/icon.png",
-                "./media/img/icon512.png"
+                "./assets/img/icon.png",
+                "./assets/img/icon512.png"
             ]);
         })
     );
@@ -23,5 +23,5 @@ self.addEventListener("fetch", event => {
 });
 
 self.addEventListener("activate", () => {
-    console.log("Service Worker activado 🚀");
+    console.log("Service Worker activado");
 });
