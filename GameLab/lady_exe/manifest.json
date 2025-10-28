@@ -5,7 +5,7 @@
     "start_url": "./index.html",
     "scope": "./",
     "display": "standalone",
-    "orientation": "landscape",
+    "orientation": "fullscreen",
     "background_color": "#000000",
     "theme_color": "#000000",
     "description": "Juego Lady.exe - RPG desarrollado por YisusDev",

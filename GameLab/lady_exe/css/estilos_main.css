@@ -44,11 +44,12 @@
         z-index: 9999;
     }
 
-body {
+    body {
 
-    min-height: 100vh;
-    overflow: hidden;
-}
+        min-height: 100vh;
+        overflow: hidden;
+        padding-top: env(safe-area-inset-top);
+    }
 
     /* ============================================================
         CONTENEDOR PRINCIPAL HUD
@@ -205,7 +206,7 @@ body {
     .attackBtn,
     .shieldBtn {
         position: absolute;
-        left:auto;
+        left: auto;
     }
 
     /* Estilos generales de los botones */
@@ -282,7 +283,7 @@ body {
         background-image: url(../assets/img/fondo4.jpg);
         background-position: center;
         background-repeat: no-repeat;
-        background-size:cover;
+        background-size: cover;
         border: 2px solid red;
         z-index: 0;
         height: 100vh;
@@ -415,7 +416,7 @@ body {
     .shieldBtn {
         position: absolute;
         left: 0;
-        bottom:0;
+        bottom: 0;
         right: 0;
         margin: auto;
     }
