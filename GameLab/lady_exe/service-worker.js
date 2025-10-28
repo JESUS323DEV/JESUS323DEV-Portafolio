@@ -26,3 +26,6 @@ self.addEventListener("fetch", event => {
 self.addEventListener("activate", () => {
     console.log("Service Worker activado");
 });
+
+
+// v2 – Forzar actualización 😏 y listo, magia pura 🧙‍♂️
